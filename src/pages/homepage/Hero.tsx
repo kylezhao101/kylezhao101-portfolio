@@ -1,8 +1,32 @@
-const Hero: React.FC = () => {
-  return (
-    <section className="h-screen px-20">
+import React, { useState, useEffect } from 'react';
 
-      <div className="pt-52 pb-28">
+const Hero: React.FC = () => {
+  const [currentTime, setCurrentTime] = useState(new Date());
+
+  useEffect(() => {
+    // Update the current time every second
+    const intervalId = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000);
+
+    // Clear the interval on component unmount
+    return () => clearInterval(intervalId);
+  }, []);
+
+  // Function to format time in a specific time zone
+  const formatTimeInTimeZone = (date: Date, timeZone: string) => {
+    return new Intl.DateTimeFormat('en-US', {
+      timeZone: timeZone,
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric',
+    }).format(date);
+  };
+
+  return (
+    <section className="h-screen px-20 bg-custom-background-gray">
+
+      <div className="pt-72 pb-48">
         <p className="font-space">Hello, I'm</p>
         <h1 className="font-neopixel text-9xl text-custom-blue">Kyle Zhao</h1>
       </div>
@@ -17,8 +41,12 @@ const Hero: React.FC = () => {
           <p>
             Studying  @ the SFU School of Interactive arts and Technology
           </p>
+          <br></br>
           <p className="text-custom-gray">
-            49.2827° N, 123.1207° W
+            Vancouver, 49.2827° N, 123.1207° W
+          </p>
+          <p className="text-custom-blue">
+          {formatTimeInTimeZone(currentTime, 'America/Vancouver')} (pst)
           </p>
         </div>
         <div className="col-span-4 font-space ">
@@ -31,12 +59,6 @@ const Hero: React.FC = () => {
           </p>
         </div>
       </div>
-
-      <p className="font-space text-custom-gray">
-        Portfolio 2024
-        kylezhao101@gmail.com
-      </p>
-      
     </section>
   );
 };

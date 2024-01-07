@@ -14,7 +14,7 @@ export default {
       colors: {
         'custom-blue': '#3945FC',
         'custom-gray': '#CBCBCB',
-        'custon-background-gray': '#B6BBC0' 
+        'custom-background-gray': '#E8ECF1' 
       },
     },
   },
