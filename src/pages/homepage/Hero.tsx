@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section className="min-h-screen px-4 sm:px-20 bg-custom-background-gray pb-40">
+    <section id="hero" className="min-h-screen px-4 sm:px-20 bg-custom-background-gray">
 
       <div className="pt-32 pb-20 sm:pt-52 sm:pb-40 2xl:pt-60 ">
         <p className="font-space">Hello, I'm</p>
@@ -49,13 +49,9 @@ const Hero: React.FC = () => {
             Vancouver, 49.2827° N, 123.1207° W
           </p>
         </div>
-        <div className="pt-40 col-span-4 col-start-1 sm:col-span-8 sm:pt-10 md:col-span-4 lg:col-span-5 font-space md:pt-10  lg:col-start-7 lg:pt-0 ">
+        <div className="pt-40 col-span-4 col-start-1 sm:col-span-8 sm:pt-10 md:col-span-8 md:pt-40 lg:col-span-5 font-space lg:col-start-7 lg:pt-0 ">
           <p className="text-2xl">
             An enthusiast for all things development, graphic design, and computer science related.
-          </p>
-          <br></br>
-          <p>
-            Currently open to positions!
           </p>
         </div>
       </div>

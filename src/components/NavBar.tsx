@@ -1,34 +1,45 @@
-import { Link } from 'react-router-dom';
+import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
+import React, { useState } from 'react';
 
 const NavBar: React.FC = () => {
+    const [hoveredLink, setHoveredLink] = useState<string | null>(null);
+    const links = ["hero", "skills", "projects", "contact"];
+
     return (
         <>
-            <nav className='flex justify-between font-mono px-20 fixed top-0 left-0 right-0 py-4 z-10 bg-custom-background-gray'>
+            <nav className='flex justify-between items-center font-mono px-4 sm:px-4 fixed top-0 left-0 right-0 py-4 z-10 bg-custom-background-gray'>
                 <div>
-                    <h5 className='font-neopixel text-xl text-custom-blue'>Kyle.z</h5>
+                    <h5 className='font-neopixel text-xl'>Kyle.z</h5>
                 </div>
-                <ul className="flex gap-10 font-space">
-                    <li>
-                    // 01 Abt me
-                    </li>
-                    <li>
-                    // 02 Expertise
-                    </li>
-                    <li>
-                    // 03 Works
-                    </li>
-                    <li>
-                    // 04 Contact
-                    </li>
-                </ul>
-                <Link
-                    to="/resume-temp.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-space rounded-full px-4 border-2 border-black  hover:border-custom-blue hover:text-custom-blue"
+
+                <div className="text-sm font-space hidden md:flex">
+                    {links.map((target, index) => (
+                        <ScrollLink
+                            key={index}
+                            to={target}
+                            smooth={true}
+                            duration={500}
+                            className='hover:cursor-pointer px-3 hover:text-custom-blue'
+                            onMouseEnter={() => setHoveredLink(target)}
+                            onMouseLeave={() => setHoveredLink(null)}
+                            style={{ 
+                                opacity: hoveredLink === target || hoveredLink === null ? 1 : 0.3,
+                                transition: 'opacity 0.3s ease-in-out', 
+                            }}
+                        >
+                            / 0{index + 1} {target.charAt(0).toUpperCase() + target.slice(1)} {/* since the section ids are all lowercased */}
+                        </ScrollLink>
+                    ))}
+                </div>
+                
+                <ScrollLink
+                    to="contact"
+                    smooth={true}
+                    duration={500}
+                    className="hover:cursor-pointer font-space rounded-full px-5 py-1 text-sm text-custom-background-gray bg-black  hover:bg-custom-blue duration-300"
                 >
-                    Resume
-                </Link>
+                    Contact
+                </ScrollLink>
             </nav>
 
             <p className='invisible lg:visible fixed font-space text-custom-gray bottom-1/4 -right-32 rotate-90'>

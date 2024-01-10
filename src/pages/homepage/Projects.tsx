@@ -42,7 +42,7 @@ const Projects: React.FC = () => {
     ];
 
     return (
-        <section className="px-4 sm:px-20 bg-custom-background-gray pb-60">
+        <section id="projects" className="px-4 sm:px-20 bg-custom-background-gray pt-60">
             <div className="font-neopixel text-5xl sm:text-7xl">
                 <h2>My Work</h2>
             </div>
