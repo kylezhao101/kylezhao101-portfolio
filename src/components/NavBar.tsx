@@ -30,7 +30,10 @@ const NavBar: React.FC = () => {
                     Resume
                 </Link>
             </nav>
-            <p className='fixed font-space text-custom-gray bottom-1/4 -right-32 rotate-90'>Portfolio 2024 - Kylezhao101@gmail.com</p>
+
+            <p className='invisible lg:visible fixed font-space text-custom-gray bottom-1/4 -right-32 rotate-90'>
+                Portfolio 2024  - <a className="hover:text-custom-blue" href="mailto:Kylezhao101@gmail.com">Kylezhao101@gmail.com</a>
+            </p>
         </>
     );
 };
