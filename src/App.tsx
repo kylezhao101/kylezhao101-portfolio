@@ -1,22 +1,23 @@
 import './App.css'
 
+import { Route, Routes } from 'react-router-dom';
+
 import NavBar from './components/NavBar';
-import Hero from './pages/homepage/Hero';
-import Skills from './pages/homepage/Skills';
-import Projects from './pages/homepage/Projects';
+import Home from './pages/homepage/Home';
+import SFUEA from './pages/projects/SFUEA';
 import Contact from './components/Contact';
+
 
 function App() {
 
   return (
     <>
       <NavBar />
-      <main>
-        <Hero />
-        <Skills />
-        <Projects />
+        <Routes>
+          <Route path="/" element= {<Home />} />
+          <Route path="/SFUEA" element= {<SFUEA />} />
+        </Routes>
         <Contact />
-      </main>
     </>
   )
 }

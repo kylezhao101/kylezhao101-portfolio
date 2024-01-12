@@ -35,11 +35,11 @@ const Contact: React.FC = () => {
                 <div className='row-start-3 col-span-4 sm:col-start-1 sm:col-span-4 md:row-start-2 lg:col-start-2  font-space'>
                     <div className='mb-5'><p className='text-xl'>Find me on</p>
 
-                        <p><a href="https://github.com/kylezhao101" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+                        <a className="hover:text-custom-blue" href="https://github.com/kylezhao101" target="_blank" rel="noopener noreferrer"><p>GitHub</p></a>
 
-                        <p><a href="temp" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+                        <a className="hover:text-custom-blue" href="temp" target="_blank" rel="noopener noreferrer"><p>LinkedIn</p></a>
                         <br></br>
-                        <p className=''><a href="/resume-temp.pdf" target="_blank" rel="noopener noreferrer">Resume</a></p>
+                        <a className="hover:text-custom-blue" href="/resume-temp.pdf" target="_blank" rel="noopener noreferrer"><p>Resume</p></a>
                     </div>
 
                     <div className='text-custom-gray'>
@@ -51,7 +51,7 @@ const Contact: React.FC = () => {
                 <div className='row-start-2 col-span-4 sm:col-start-1 sm:col-span-4 md:col-start-5 lg:col-span-3 lg:col-start-7 font-space mb-5'>
                     <a
                         href="mailto:kylezhao101@gmail.com"
-                        className="rounded-full text-xl px-4 border-2 border-black  hover:border-custom-blue hover:text-custom-blue"
+                        className="rounded-full text-xl px-4 border-2 border-black  hover:border-custom-blue hover:text-custom-blue duration-200 ease-in-out"
                     >
                         kylezhao101@gmail.com
                     </a>

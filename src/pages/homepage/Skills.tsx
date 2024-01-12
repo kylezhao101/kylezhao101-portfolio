@@ -9,7 +9,7 @@ const Skills: React.FC = () => {
   };
 
   return (
-    <section id="skills" className="min-screen px-4 sm:px-20 bg-custom-background-gray pt-40 ">
+    <section id="expertise" className="min-screen px-4 sm:px-20 bg-custom-background-gray pt-40 ">
 
       <div className="lg:pt-0 grid grid-cols-4 sm:grid-cols-8 lg:grid-cols-12 gap-5">
         <div className="text-5xl sm:text-7xl col-span-4 sm:col-span-8 font-neopixel ">

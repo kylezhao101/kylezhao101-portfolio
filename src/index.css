@@ -7,3 +7,72 @@
 @tailwind components;
 @tailwind utilities;
 
+.swipe {
+  position: relative;
+  width: fit-content;
+
+  &::after {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 100%;
+      width: 0%;
+      height: 100%;
+      background-color: #1f1f1f;
+      animation: swipe 1s ease-out 0.4s forwards;
+  }
+
+  &--delay {
+      &::after {
+          background-color: #FFF;
+          animation-delay: 1s;
+      }
+  }
+}
+
+.swipe-text {
+  opacity: 0;
+  animation: fade 0.01s ease-out 0.9s forwards;
+}
+
+@keyframes fade {
+  from {
+      opacity: 0;
+  }
+
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes swipe {
+  0% {
+      right: 100%;
+      left: 0;
+      width: 0%;
+  }
+
+  50% {
+      right: 0;
+      left: 0;
+      width: 100%;
+  }
+
+  100% {
+      right: 0;
+      left: 100%;
+      width: 0%;
+  }
+}
+
+.rotate-square {
+  transform: rotate(0deg); 
+  transition: transform 0.3s ease;
+}
+
+.view-more-button:hover .rotate-square,
+.api-reference-button:hover .rotate-square {
+  transform: rotate(45deg); 
+}

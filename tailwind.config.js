@@ -8,13 +8,13 @@ export default {
     extend: {
       fontFamily: {
         'space': ['Space Mono', 'monospace'],
-        'neopixel' : ['neopixel', 'sans']
+        'neopixel': ['neopixel', 'sans']
 
       },
       colors: {
         'custom-blue': '#3945FC',
         'custom-gray': '#CBCBCB',
-        'custom-background-gray': '#E8ECF1' 
+        'custom-background-gray': '#E8ECF1'
       },
     },
   },
