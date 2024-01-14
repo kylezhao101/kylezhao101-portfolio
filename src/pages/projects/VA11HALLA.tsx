@@ -1,0 +1,136 @@
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import projectsData from '../../projectsData';
+import ProjectNav from '../../components/ProjectNav';
+
+import va11hallaMockup from '../../assets/images/va11halla/va11halla-mockup.webp';
+import voxelRoom from '../../assets/images/va11halla/voxel-room.gif';
+import ingameShot from '../../assets/images/va11halla/in-game-ui.webp';
+import figmaShot1 from '../../assets/images/va11halla/figma-design-1.webp';
+import figmaShot2 from '../../assets/images/va11halla/figma-design-2.webp';
+import firebaseShot from '../../assets/images/va11halla/firebase-screenshot.webp';
+
+const SFUEA: React.FC = () => {
+
+    // Find the project with the title 'SFU Esports Association'
+    const va11hallaProject = projectsData.find((project) => project.title === 'VA11-Hall-A Drinktionary Fansite');
+
+    if (!va11hallaProject) {
+        return <div>No SFU Esports Association project found</div>;
+    }
+
+    const techString = va11hallaProject.technologies.join('  //  ');
+
+
+    return (
+        <>
+            <section className='font-space bg-custom-background-gray pt-20'>
+
+                <section className='px-4 sm:px-20 grid grid-cols-12'>
+
+                    <div className='col-span-5 flex flex-col justify-center'>
+                        <div className='swipe'>
+                            <h2 className="swipe-text text-7xl mb-5 pt-5 lg:pt-0">{va11hallaProject.title}</h2>
+                            <p className='swipe-text text-custom-blue'>{va11hallaProject.type}</p>
+                        </div>
+
+                    </div>
+
+                    <div className='col-start-7 col-span-6 sticky top-10'>
+                        {<img src={va11hallaMockup} alt={va11hallaProject.title} className="w-full" />}
+                        <p className='text-custom-gray'>Mockup of the recipe dashboard</p>
+                        <div className='row-start-2 col-start-7 col-span-7 flex flex-row justify-between'>
+                            <p>{techString}</p>
+                            <p>{va11hallaProject.date}</p>
+                        </div>
+                    </div>
+
+                    <div className='row-start-2 col-span-5'>
+                        <p>
+                            A dashboard ui design implemented in React, based on the 2016 visual novel (Va-11 Hall-A) by Sukeban Games. This facilitated my introduction to React (UI library), Firebase (Google backend services), and Tailwind CSS (a CSS framework).
+                        </p>
+                        {<img src={voxelRoom} alt={va11hallaProject.title} className="w-full" />}
+                        <p className='text-custom-gray'>Animated voxel art of the main character's room</p>
+                    </div>
+                </section>
+
+                <section className='px-4 sm:px-20 grid grid-cols-12'>
+
+                    <div className='col-span-5 flex flex-col justify-center'>
+                        <h3 className='text-2xl mb-5'>Some Context</h3>
+                        <p>
+                            The gameplay and dialogue of va-11 hall-a progresses through bartending. Creating drinks involves the mixing of components and following preparation steps which can create flavors that match customer’s requests.
+
+                            <br></br><br></br>
+                            The choices of drinks and their proportions can influence the characters' moods and the direction of the narrative.
+                        </p>
+
+                    </div>
+
+                    <div className='col-start-7 col-span-6 sticky top-10'>
+                        {<img src={ingameShot} alt={va11hallaProject.title} className="w-full" />}
+                        <p className='text-custom-gray'>In-game screenshot of the drink mixing interface</p>
+                    </div>
+
+                    <div className='row-start-2 col-span-5'>
+                        <h3 className='text-2xl mb-5'>Project Motivations</h3>
+                        <p>
+                            The game’s recipe book doesn’t allow for quick retrieval and comparison of drink recipes. Each recipe is restricted to its unique page, and players can only browse through name, flavor, and type individually.
+                            <br></br><br></br>
+                            It should still be noted that the game's recipe book shares the same scene as the mixing interface. The recipe book is restricted to certain size, and the act of mixing drinks isn't the sole focus of the game, but rather the dialogue and story.
+                            <br></br><br></br>
+                            Nonetheless, I saw this as an opportunity to design a dashboard with a  quicker search mechanism, that also facilitates easy comparison between each drink.
+                        </p>
+                    </div>
+                </section>
+
+                <section className='px-4 sm:px-20 grid grid-cols-12'>
+
+                    <div className='col-span-5 flex flex-col justify-center'>
+                        <h3 className='text-2xl mb-5'>1. The Data</h3>
+                        <p>
+                            Instead of manually creating the Firebase database content, the Beatiful Soup Python library was used to scrape drink information from the va11halla.fandom site.
+                        </p>
+                        <br></br>
+                        <p>
+                            The output from the Python script was then imported into Firebase.
+                        </p>
+                    </div>
+
+                    <div className='row-start-1 col-start-7 col-span-6'>
+                        {<img src={firebaseShot} alt={va11hallaProject.title} className="w-full" />}
+                    </div>
+
+                    
+                    <h3 className='row-start-2 col-span-5 text-2xl mb-5'>2. Figma Component Design</h3>
+                    <div className='row-start-3 col-span-5'>
+                        
+                        <p>
+                            the primary components of this dashboard could be split into interactive sort and filter selections, and content units (being the drink cards).
+                        </p>
+                        <br></br>
+                        <p>
+                            Following the games colorful and busy, cyberpunk theme, I used vivid neon-like colors to denote interaction and drink ingredients.
+                        </p>
+                    </div>
+                    <div className='row-start-3 col-start-7 col-span-5'>
+                        <p>
+                            To reduce cognitive load and allows users to quickly scan and compare recipes, pills were implemented, with specific colors reflect symbolize in-game ingredients and their color. 
+                        </p>
+                    </div>
+                    <div className='row-start-4 col-start-1 col-span-6'>
+                        {<img src={figmaShot1} alt={va11hallaProject.title} className="w-full" />}
+                    </div>
+                    <div className='row-start-4 col-start-7 col-span-6'>
+                        {<img src={figmaShot2} alt={va11hallaProject.title} className="w-full" />}
+                    </div>
+
+                </section>
+
+                <ProjectNav projectsData={projectsData} />
+            </section>
+        </>
+    );
+};
+
+export default SFUEA;

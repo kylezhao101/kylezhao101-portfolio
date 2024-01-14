@@ -9,7 +9,7 @@ const projectsData = [
         technologies: ['React', 'Firebase', 'Tailwind', 'React Three Fiber', 'Python'],
         date: '08.2023',
         repoLink: 'https://github.com/kylezhao101/va11halla-drink-recipes',
-        viewMoreLink: 'link',
+        viewMoreLink: '/VA11HALLA',
         image: va11halla,
     },
     {
@@ -18,7 +18,7 @@ const projectsData = [
         technologies: ['PHP', 'mySQL', 'jQuery', 'HTML', 'CSS'],
         date: '12.2023',
         repoLink: 'https://github.com/kylezhao101/remote-IAT352/tree/main/Roamfy',
-        viewMoreLink: 'link',
+        viewMoreLink: '/link',
         image: roamfy,
     },
     {
