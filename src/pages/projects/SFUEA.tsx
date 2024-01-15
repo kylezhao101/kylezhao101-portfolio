@@ -43,7 +43,7 @@ const SFUEA: React.FC = () => {
 
           <div className='row-start-1 col-span-full md:col-span-5 md:flex md:flex-col md:justify-center'>
             <div className='swipe'>
-              <h2 className="swipe-text text-4xl xl:text-7xl mb-5 pt-5 lg:pt-0">{sfueaProject.title}</h2>
+              <h2 className="swipe-text text-4xl xl:text-6xl mb-5 pt-5 lg:pt-0">{sfueaProject.title}</h2>
               <p className='swipe-text text-custom-blue'>{sfueaProject.type}</p>
             </div>
 
@@ -59,7 +59,7 @@ const SFUEA: React.FC = () => {
             </div>
           </div>
 
-          <div className='mt-10 row-start-3 col-span-12 md:col-span-7 xl:col-span-5'>
+          <div className='my-32 md:mt-10 row-start-3 col-span-12 md:col-span-7 xl:col-span-5'>
             <p>
               As an club executive of design, I aim to fulfill requests of  club coordinators and competitive team players to the best of my abilities and to contribute to the greater SFU gaming community (hopefully).
             </p>
