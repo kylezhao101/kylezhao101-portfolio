@@ -102,10 +102,10 @@ const ProjectEntry: React.FC<ProjectEntryProps> = ({
                     {image && <img src={image} alt={title} className="w-full" />}
                 </div>
             </Link>
-            <div className={`grid grid-cols-4 sm:grid-cols-8 lg:grid-cols-12 gap-0 font-space pb-20 border-b-2 transition duration-300 ease-in-out ${isHovered ? 'border-custom-blue' : 'border-custom-gray'}`}>
-                <p className="pt-10 col-span-4 lg:row-start-1 lg:col-start-1 lg:col-span-3">{type}</p>
-                <p className="row-start-2 pt-10 col-span-2 sm:col-span-6 lg:col-start-7 lg:row-start-1 lg:col-span-3">{techString}</p>
-                <p className="row-start-2 pt-10 col-start-4 col-span-2 sm:col-span-4 lg:row-start-1 lg:col-start-12 lg:col-span-3 flex self-end justify-end">{date}</p>
+            <div className={`grid grid-cols-4 sm:grid-cols-8 lg:grid-cols-12 gap-0 font-space pb-10 pt-5 border-b-2 transition duration-300 ease-in-out ${isHovered ? 'border-custom-blue' : 'border-custom-gray'}`}>
+                <p className="col-span-4 lg:row-start-1 lg:col-start-1 lg:col-span-3">{type}</p>
+                <p className="row-start-2 col-span-2 sm:col-span-6 lg:col-start-7 lg:row-start-1 lg:col-span-3">{techString}</p>
+                <p className="row-start-2  col-start-4 col-span-2 sm:col-span-4 lg:row-start-1 lg:col-start-12 lg:col-span-3 flex self-end justify-end">{date}</p>
             </div>
         </>
     );

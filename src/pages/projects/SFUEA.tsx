@@ -52,7 +52,7 @@ const SFUEA: React.FC = () => {
           <div className='row-start-2 col-span-12 md:row-start-1 md:col-start-7 md:col-span-6'>
             
             {<img src={sunsetSeries} alt={sfueaProject.title} className="w-full" />}
-            <p className='text-custom-gray'>Sunset Series LAN Tournament Lanyards</p>
+            <p className='text-sm md:text-base text-custom-gray'>Sunset Series LAN Tournament Lanyards</p>
             <div className='flex flex-row justify-between'>
               <p>{techString}</p>
               <p>{sfueaProject.date}</p>

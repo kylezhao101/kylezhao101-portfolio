@@ -18,7 +18,7 @@ const projectsData = [
         technologies: ['PHP', 'mySQL', 'jQuery', 'HTML', 'CSS'],
         date: '12.2023',
         repoLink: 'https://github.com/kylezhao101/remote-IAT352/tree/main/Roamfy',
-        viewMoreLink: '/link',
+        viewMoreLink: '/ROAMFY',
         image: roamfy,
     },
     {

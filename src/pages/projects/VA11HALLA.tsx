@@ -47,7 +47,7 @@ const SFUEA: React.FC = () => {
                 </section>
 
                 <section className='px-4 lg:px-20 grid grid-cols-12 md:gap-y-20 md:py-20'>
-                    <div className='my-32 row-start-1 col-span-full md:col-span-5'>
+                    <div className='my-32 md:mt-10 row-start-1 col-span-full md:col-span-5'>
                         <p>
                             A dashboard ui design implemented in React, based on the 2016 visual novel (Va-11 Hall-A) by Sukeban Games.
                             <br></br><br></br>
