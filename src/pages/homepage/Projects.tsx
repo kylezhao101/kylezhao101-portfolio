@@ -3,24 +3,29 @@ import projectsData from '../../projectsData'
 
 const Projects: React.FC = () => {
     return (
-        <section id="works" className="px-4 sm:px-20 bg-custom-background-gray pt-60">
-            <div className="flex items-start">
-                <div className="bg-custom-blue w-3 h-3 mr-3 mt-2"></div>
-                <h3 className="font-space text-xl">My work</h3>
-            </div>
-            {projectsData.map((project, index) => (
-                <ProjectEntry
-                    key={index}
-                    title={project.title}
-                    image={project.image}
-                    type={project.type}
-                    technologies={project.technologies}
-                    date={project.date}
-                    viewMoreLink={project.viewMoreLink}
-                    apiReferenceLink={project.apiReferenceLink}
-                />
-            ))}
-        </section>
+        <>
+            <section id="works" className="pt-40 a-section bg-custom-background-gray">
+                <div className="flex items-center overflow-hidden ">
+                    <h2 className="a-section-marquee-text text-4xl md:text-5xl lg:text-8xl font-space"> MY PROJECTS//MY PROJECTS//</h2>
+                    <h2 className="a-section-marquee-text text-4xl md:text-5xl lg:text-8xl font-space"> MY PROJECTS//MY PROJECTS//</h2>
+                </div>
+            </section>
+
+            <section className="px-4 sm:px-20 bg-custom-background-gray ">
+                {projectsData.map((project, index) => (
+                    <ProjectEntry
+                        key={index}
+                        title={project.title}
+                        image={project.image}
+                        type={project.type}
+                        technologies={project.technologies}
+                        date={project.date}
+                        viewMoreLink={project.viewMoreLink}
+                        apiReferenceLink={project.apiReferenceLink}
+                    />
+                ))}
+            </section>
+        </>
     );
 };
 

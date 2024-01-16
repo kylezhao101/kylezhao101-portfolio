@@ -76,3 +76,29 @@
 .api-reference-button:hover .rotate-square {
   transform: rotate(45deg); 
 }
+
+.a-section-marquee-text {
+  white-space: nowrap;
+  flex-shrink: 0;
+  width: max-content;
+  transform: translateX(0);
+  animation: a-text-scroll 45s linear infinite;
+}
+@keyframes a-text-scroll {
+  0% { transform: translate3d(-100%, 0, 0); }
+  100% { transform: translate3d(0%, 0, 0); }
+}
+
+.b-section-marquee-text {
+  white-space: nowrap;
+  flex-shrink: 0;
+  width: max-content;
+  transform: translateX(0);
+  animation: b-text-scroll 45s linear infinite;
+}
+
+@keyframes b-text-scroll {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-100%, 0, 0); }
+}
+

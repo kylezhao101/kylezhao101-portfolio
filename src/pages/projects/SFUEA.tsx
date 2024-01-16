@@ -35,58 +35,53 @@ const SFUEA: React.FC = () => {
 
   const imageSources = [crown, ktruue, s1ay3rr, yuzu, ottoisgun, happyheart, lunr, colingogo, mai, angelspell];
 
+
   return (
-    <>
-      <section className='font-space bg-custom-background-gray pt-20'>
-
-        <section className='px-4 lg:px-20 grid grid-cols-12'>
-
-          <div className='row-start-1 col-span-full md:col-span-5 md:flex md:flex-col md:justify-center'>
-            <div className='swipe'>
-              <h2 className="swipe-text text-4xl xl:text-6xl mb-5 pt-5 lg:pt-0">{sfueaProject.title}</h2>
-              <p className='swipe-text text-custom-blue'>{sfueaProject.type}</p>
-            </div>
-
+    <section className='font-space bg-custom-background-gray pt-20'>
+      <section className='px-4 lg:px-20 grid grid-cols-12'>
+        <div className='row-start-1 col-span-full md:col-span-5 md:flex md:flex-col md:justify-center'>
+          <div className='swipe'>
+            <h2 className="swipe-text text-4xl xl:text-6xl mb-5 pt-5 lg:pt-0">{sfueaProject.title}</h2>
+            <p className='swipe-text text-custom-blue'>{sfueaProject.type}</p>
           </div>
-
-          <div className='row-start-2 col-span-12 md:row-start-1 md:col-start-7 md:col-span-6'>
-            
-            {<img src={sunsetSeries} alt={sfueaProject.title} className="w-full" />}
-            <p className='text-sm md:text-base text-custom-gray'>Sunset Series LAN Tournament Lanyards</p>
-            <div className='flex flex-row justify-between'>
-              <p>{techString}</p>
-              <p>{sfueaProject.date}</p>
-            </div>
+        </div>
+        <div className='row-start-2 col-span-12 md:row-start-1 md:col-start-7 md:col-span-6'>
+          <img src={sunsetSeries} alt={sfueaProject.title} className="w-full" />
+          <p className='text-sm md:text-base text-custom-gray'>Sunset Series LAN Tournament Lanyards</p>
+          <div className='flex flex-row justify-between'>
+            <p>{techString}</p>
+            <p>{sfueaProject.date}</p>
           </div>
-
-          <div className='my-32 md:mt-10 row-start-3 col-span-12 md:col-span-7 xl:col-span-5'>
-            <p>
-              As an club executive of design, I aim to fulfill requests of  club coordinators and competitive team players to the best of my abilities and to contribute to the greater SFU gaming community (hopefully).
-            </p>
-          </div>
-        </section>
-
-
-
-        <div className='px-4 sm:mx-auto my-40 sm:max-w-2xl'>
+        </div>
+        <div className='my-32 md:mt-10 row-start-3 col-span-12 md:col-span-7 xl:col-span-5'>
           <p>
-            I’ve created over 40 personalized banners as per the individual requests of our competitive and Varsity players, whom I've communicated with throughout the process.
-            <br></br><br></br>
-            The following are 10 selected works:
+            As a club executive of design, I aim to fulfill requests of club coordinators and competitive team players to the best of my abilities and to contribute to the greater SFU gaming community (hopefully).
           </p>
         </div>
-
-        <div className="flex flex-wrap mt-20">
-          {imageSources.map((image, index) => (
-            <div key={index} className="w-full md:w-1/2">
-              <img src={image} alt={`Image ${index + 1}`} className="w-full" />
-            </div>
-          ))}
-        </div>
-
-        <ProjectNav projectsData={projectsData} />
       </section>
-    </>
+
+      <section className="b-section bg-custom-background-gray">
+        <div className="h-52 flex items-center overflow-hidden ">
+          <h2 className="text-custom-gray b-section-marquee-text text-4xl md:text-5xl lg:text-8xl font-space"> SFU ESPORTS ASSOCIATION//</h2>
+          <h2 className="text-custom-gray b-section-marquee-text text-4xl md:text-5xl lg:text-8xl font-space"> SFU ESPORTS ASSOCIATION//</h2>
+        </div>
+      </section>
+      <div className='px-4 sm:mx-auto my-40 sm:max-w-2xl'>
+        <p>
+          I’ve created over 40 personalized banners as per the individual requests of our competitive and Varsity players, whom I've communicated with throughout the process.
+          <br /><br />
+          The following are 10 selected works:
+        </p>
+      </div>
+      <div className="flex flex-wrap mt-20">
+        {imageSources.map((image, index) => (
+          <div key={index} className="w-full md:w-1/2">
+            <img src={image} alt={`Image ${index + 1}`} className="w-full" />
+          </div>
+        ))}
+      </div>
+      <ProjectNav projectsData={projectsData} />
+    </section>
   );
 };
 
