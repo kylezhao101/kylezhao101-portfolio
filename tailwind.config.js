@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'space': ['Space Mono', 'monospace'],
+        'space': ['Space Grotesk', 'monospace'],
         'neopixel': ['neopixel', 'sans']
 
       },

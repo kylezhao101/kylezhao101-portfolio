@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import projectsData from '../../projectsData';
 import ProjectNav from '../../components/ProjectNav';
+import ProjectPageHeader from '../../components/ProjectPageHeader';
 
-import va11hallaMockup from '../../assets/images/va11halla/va11halla-mockup.webp';
 import voxelRoom from '../../assets/images/va11halla/voxel-room.gif';
 import ingameShot from '../../assets/images/va11halla/in-game-ui.webp';
 import figmaShot1 from '../../assets/images/va11halla/figma-design-1.webp';
@@ -12,39 +12,23 @@ import firebaseShot from '../../assets/images/va11halla/firebase-screenshot.webp
 
 const SFUEA: React.FC = () => {
 
+    //brings to top of page
+    const location = useLocation();
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location.pathname]);
+
     // Find the project with the title 'SFU Esports Association'
     const va11hallaProject = projectsData.find((project) => project.title === 'VA11-Hall-A Drinktionary Fansite');
 
     if (!va11hallaProject) {
         return <div>No SFU Esports Association project found</div>;
     }
-
-    const techString = va11hallaProject.technologies.join('  //  ');
-
-
     return (
         <>
             <section className='font-space bg-custom-background-gray pt-20'>
 
-                <section className='px-4 lg:px-20 grid grid-cols-12'>
-
-                    <div className='row-start-1 col-span-full md:col-span-5 md:flex md:flex-col md:justify-center'>
-                        <div className='swipe'>
-                            <h2 className="swipe-text text-4xl xl:text-6xl mb-5 pt-5 lg:pt-0">{va11hallaProject.title}</h2>
-                            <p className='swipe-text text-custom-blue'>{va11hallaProject.type}</p>
-                        </div>
-                    </div>
-
-                    <div className='row-start-2 col-span-12 md:row-start-1 md:col-start-7 md:col-span-6'>
-
-                        {<img src={va11hallaMockup} alt={va11hallaProject.title} className="w-full" />}
-                        <p className='text-custom-gray'>Mockup of the recipe dashboard</p>
-                        <div className='row-start-2 col-start-7 col-span-7 flex flex-row justify-between'>
-                            <p>{techString}</p>
-                            <p>{va11hallaProject.date}</p>
-                        </div>
-                    </div>
-                </section>
+            <ProjectPageHeader project={va11hallaProject}/>
 
                 <section className='px-4 lg:px-20 grid grid-cols-12 md:gap-y-20 md:py-20'>
                     <div className='my-32 md:mt-10 row-start-1 col-span-full md:col-span-5'>
