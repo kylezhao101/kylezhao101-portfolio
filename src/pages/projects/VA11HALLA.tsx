@@ -9,14 +9,16 @@ import ingameShot from '../../assets/images/va11halla/in-game-ui.webp';
 import figmaShot1 from '../../assets/images/va11halla/figma-design-1.webp';
 import figmaShot2 from '../../assets/images/va11halla/figma-design-2.webp';
 import firebaseShot from '../../assets/images/va11halla/firebase-screenshot.webp';
+import searchScreenCast from '../../assets/videos/va11halla/main-search.mp4';
+import sortScreenCast from '../../assets/videos/va11halla/secondary-and-sort.mp4';
 
 const SFUEA: React.FC = () => {
 
-    //brings to top of page
-    const location = useLocation();
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [location.pathname]);
+    // //brings to top of page
+    // const location = useLocation();
+    // useEffect(() => {
+    //     window.scrollTo(0, 0);
+    // }, [location.pathname]);
 
     // Find the project with the title 'SFU Esports Association'
     const va11hallaProject = projectsData.find((project) => project.title === 'VA11-Hall-A Drinktionary Fansite');
@@ -28,7 +30,7 @@ const SFUEA: React.FC = () => {
         <>
             <section className='font-space bg-custom-background-gray pt-20'>
 
-            <ProjectPageHeader project={va11hallaProject}/>
+                <ProjectPageHeader project={va11hallaProject} />
 
                 <section className='px-4 lg:px-20 grid grid-cols-12 md:gap-y-20 md:py-20'>
                     <div className='my-32 md:mt-10 row-start-1 col-span-full md:col-span-5'>
@@ -77,7 +79,7 @@ const SFUEA: React.FC = () => {
 
                 <section className='px-4 lg:px-20 grid grid-cols-12 pb-20 gap-y-20 md:my-0'>
                     <div className='col-span-full row-start-1 md:col-span-5 md:flex md:flex-col md:justify-center'>
-                        <h3 className='text-2xl mb-5'>1. The Data</h3>
+                        <h3 className='text-2xl mb-5'>The Data</h3>
                         <p>
                             Instead of manually creating the Firebase database content, the Beatiful Soup Python library was used to scrape drink information from the va11halla.fandom site.
                         </p>
@@ -94,7 +96,7 @@ const SFUEA: React.FC = () => {
 
                 <section className='px-4 lg:px-20 grid grid-cols-12 pb-20 md:my-10'>
 
-                    <h3 className='row-start-1 col-span-full md:col-span-5 text-2xl mb-5'>2. Figma Component Design</h3>
+                    <h3 className='row-start-1 col-span-full md:col-span-5 text-2xl mb-5'>Figma Component Design</h3>
                     <div className='mb-20 row-start-2 col-span-12 md:col-span-5'>
                         <p>
                             The primary components of this dashboard could be split into interactive sort and filter selections, and content units (being the drink cards). Following the games colorful and busy cyberpunk theme, I used vivid neon-like colors to denote interaction and drink ingredients.
@@ -112,6 +114,28 @@ const SFUEA: React.FC = () => {
                         {<img src={figmaShot2} alt={va11hallaProject.title} className="w-full" />}
                     </div>
 
+
+
+                </section>
+
+                <section className='px-4 lg:px-20 grid grid-cols-12 md:my-10'>
+                    <div className='mt-20 col-span-full col-start-1 md:col-start-2 md:col-span-10 lg:col-start-3  lg:col-span-8'>
+                        <h3 className='text-2xl mb-5'>Implementation: Multi-layered Search and Fitlering of drinks</h3>
+                        <p className='md:w-3/4 mb-20'>
+                            The app uses Firebase SDK to fetch drink data from Firestore, organized in a 'drinks' collection. The data is stored in the component's state with useState. Sorting options like name, price, or flavor are available, optimized using useMemo to prevent unnecessary recalculations. 
+                            <br></br><br></br>
+                            The sorting considers user-selected options such as search query, types, flavor, and sorting criteria for an efficient and responsive user experience, allowing easy exploration and selection of drinks.
+                        </p>
+                        <video className='mb-5' loop autoPlay muted >
+                            <source src={searchScreenCast} type="video/mp4" />
+                        </video>
+                        <p className='text-base mb-40'> Search bar and Primary Flavour toggle</p>
+
+                        <video className='mb-b' loop autoPlay muted >
+                            <source src={sortScreenCast} type="video/mp4" />
+                        </video>
+                        <p className='text-base mb-40'>Secondary flavor and sorting</p>
+                    </div>
                 </section>
 
                 <ProjectNav projectsData={projectsData} />

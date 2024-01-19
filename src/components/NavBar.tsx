@@ -9,7 +9,7 @@ const NavBar: React.FC = () => {
 
     return (
         <>
-            <nav className='flex justify-between items-center font-mono px-4 sm:px-4 fixed top-0 left-0 right-0 py-4 z-10 bg-custom-background-gray'>
+            <nav className='flex justify-between items-center font-mono px-4 sm:px-4 fixed top-0 left-0 right-0 py-3 z-10 bg-custom-background-gray'>
                 <div>
                     <RouterLink to="/" className='font-neopixel text-xl hover:text-custom-blue duration-300 transition-colors ease-in-out'>
                         Kyle.z
