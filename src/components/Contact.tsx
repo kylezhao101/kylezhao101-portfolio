@@ -37,7 +37,7 @@ const Contact: React.FC = () => {
                         <a className="hover:text-custom-blue" href="https://github.com/kylezhao101" target="_blank" rel="noopener noreferrer"><p>GitHub</p></a>
                         <a className="hover:text-custom-blue" href="https://www.linkedin.com/in/kyle-zhao-397452216/" target="_blank" rel="noopener noreferrer"><p>LinkedIn</p></a>
                         <br></br>
-                        <a className="hover:text-custom-blue" href="/resume-temp.pdf" target="_blank" rel="noopener noreferrer"><p>Resume</p></a>
+                        <a className="hover:text-custom-blue" href="/Kyle-Zhao-Resume.pdf" target="_blank" rel="noopener noreferrer"><p>Resume</p></a>
                     </div>
 
                     <div className='text-custom-gray'>
