@@ -27,6 +27,20 @@ const ProjectPageHeader: React.FC<ProjectDetailProps> = ({ project }) => {
                     <h2 className="swipe-text text-4xl xl:text-6xl mb-5 pt-5 lg:pt-0">{project.title}</h2>
                     <p className='swipe-text text-custom-blue'>{project.type}</p>
                 </div>
+
+                {project.repoLink && (
+                    <Link
+                        to={project.repoLink}
+                        target=""
+                        rel="noopener noreferrer"
+                        className="swipe flex items-center hover:text-custom-blue transition duration-200 ease-in-out w-fit mt-10"
+                    >
+                        <p className='swipe-text'>
+                            View Repository
+                        </p>
+                    </Link>
+                )}
+
             </div>
 
             <div className='row-start-2 col-span-12 md:row-start-1 md:col-start-7 md:col-span-6'>
@@ -38,7 +52,7 @@ const ProjectPageHeader: React.FC<ProjectDetailProps> = ({ project }) => {
                     <p>{project.date}</p>
                 </div>
             </div>
-        </section>
+        </section >
 
     );
 };

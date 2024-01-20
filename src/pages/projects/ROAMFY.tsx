@@ -13,10 +13,10 @@ import passwordChange from '../../assets/images/roamfy/passwordChange.webp';
 const ROAMFY: React.FC = () => {
 
     // //brings to top of page
-    // const location = useLocation();
-    // useEffect(() => {
-    //     window.scrollTo(0, 0);
-    // }, [location.pathname]);
+    const location = useLocation();
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location.pathname]);
 
     // Find the project with the title 'SFU Esports Association'
     const roamfyProject = projectsData.find((project) => project.title === 'Roamfy (IAT 352)');

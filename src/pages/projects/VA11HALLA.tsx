@@ -15,10 +15,10 @@ import sortScreenCast from '../../assets/videos/va11halla/secondary-and-sort.mp4
 const SFUEA: React.FC = () => {
 
     // //brings to top of page
-    // const location = useLocation();
-    // useEffect(() => {
-    //     window.scrollTo(0, 0);
-    // }, [location.pathname]);
+    const location = useLocation();
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location.pathname]);
 
     // Find the project with the title 'SFU Esports Association'
     const va11hallaProject = projectsData.find((project) => project.title === 'VA11-Hall-A Drinktionary Fansite');
