@@ -57,7 +57,7 @@ const Hero: React.FC = () => {
 
         <div className="pt-40 col-span-4 col-start-1 sm:pl-5 sm:col-span-8 sm:pt-10 md:col-span-8 lg:col-span-5 font-space lg:col-start-7 lg:pt-0 ">
           <div className='swipe' >
-            <p className="swipe-text text-4xl leading-snug">
+            <p className="swipe-text text-2xl leading-snug">
               An enthusiast for all things development, graphic design, and computer science related.
             </p>
           </div>

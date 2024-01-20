@@ -41,24 +41,26 @@ const SFUEA: React.FC = () => {
       <section className='px-4 lg:px-20 grid grid-cols-12'>
         <div className='my-32 md:mt-10 row-start-3 col-span-12 md:col-span-7 xl:col-span-5'>
           <p>
-            As a club executive of design, I aim to fulfill requests of club coordinators and competitive team players to the best of my abilities and to contribute to the greater SFU gaming community (hopefully).
+            As a club executive of design, I aim to fulfill requests of club coordinators and competitive team players to the best of my abilities and to (hopefully) contribute to the greater SFU gaming community.
           </p>
         </div>
       </section>
 
       <section className="b-section bg-custom-background-gray">
-        <div className="h-52 flex items-center overflow-hidden ">
+        <div className="mt-20 flex items-center overflow-hidden ">
           <h2 className="text-custom-gray b-section-marquee-text text-4xl md:text-5xl lg:text-8xl font-space"> SFU ESPORTS ASSOCIATION//</h2>
           <h2 className="text-custom-gray b-section-marquee-text text-4xl md:text-5xl lg:text-8xl font-space"> SFU ESPORTS ASSOCIATION//</h2>
         </div>
       </section>
-      <div className='px-4 sm:mx-auto my-40 sm:max-w-2xl'>
+
+      <div className='px-4 sm:mx-auto my-64 sm:max-w-2xl'>
         <p>
           I’ve created over 40 personalized banners as per the individual requests of our competitive and Varsity players, whom I've communicated with throughout the process.
           <br /><br />
           The following are 10 selected works:
         </p>
       </div>
+
       <div className="flex flex-wrap mt-20">
         {imageSources.map((image, index) => (
           <div key={index} className="w-full md:w-1/2">

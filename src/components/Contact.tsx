@@ -32,12 +32,10 @@ const Contact: React.FC = () => {
                     <h2 className='font-neopixel text-5xl mb-20 sm:text-7xl md:mb-10'>Get in touch</h2>
                 </div>
 
-                <div className='row-start-3 col-span-4 sm:col-start-1 sm:col-span-4 md:row-start-2 lg:col-start-2  font-space'>
-                    <div className='mb-5'><p className='text-xl'>Find me on</p>
-
+                <div className='row-start-3 col-span-4 sm:col-start-1 sm:col-span-4 md:row-start-2 lg:col-start-2 font-space'>
+                    <div className='mb-5 w-min'>
                         <a className="hover:text-custom-blue" href="https://github.com/kylezhao101" target="_blank" rel="noopener noreferrer"><p>GitHub</p></a>
-
-                        <a className="hover:text-custom-blue" href="temp" target="_blank" rel="noopener noreferrer"><p>LinkedIn</p></a>
+                        <a className="hover:text-custom-blue" href="https://www.linkedin.com/in/kyle-zhao-397452216/" target="_blank" rel="noopener noreferrer"><p>LinkedIn</p></a>
                         <br></br>
                         <a className="hover:text-custom-blue" href="/resume-temp.pdf" target="_blank" rel="noopener noreferrer"><p>Resume</p></a>
                     </div>
@@ -55,7 +53,7 @@ const Contact: React.FC = () => {
                     >
                         kylezhao101@gmail.com
                     </a>
-                    <p className="mt-5">Open for work</p>
+                    <p className="mt-5">(Open for work)</p>
                     <p className="mt-5">Vancouver, Canada</p>
                     <p>
                         {formatTimeInTimeZone(currentTime, 'America/Vancouver')} (PST)

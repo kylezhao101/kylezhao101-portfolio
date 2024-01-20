@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 const ProjectNav: React.FC<{ projectsData: Array<any> }> = ({ projectsData }) => {
 
   return (
-    <div className="px-4 lg:px-20 pt-28">
+    <div className="mt-32 px-4 lg:px-20 pt-28">
       {projectsData.map((project, index) => (
         <Link
           to={project.apiReferenceLink ? project.apiReferenceLink : project.viewMoreLink}

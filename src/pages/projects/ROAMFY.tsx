@@ -31,14 +31,14 @@ const ROAMFY: React.FC = () => {
 
                 <ProjectPageHeader project={roamfyProject} />
 
-                <section className='mt-32 md:mt-0 px-4 lg:px-20 grid grid-cols-12'>
-                    <h3 className='text-2xl mb-5 col-span-full'>Project Motivations</h3>
+                <section className='py-20 px-4 lg:px-20 grid grid-cols-12'>
+                    <h3 className='my-20 md:mt-10 row-start-1 text-2xl mb-5 col-span-full'>Project Motivations</h3>
                     <p className='row-start-2 col-span-12 md:col-span-5 col-start-1'>
                         Roamfy is an itinerary sharing platform designed to assist users and visitors in planning, tracking, exploring, and sharing trip itineraries.
                         The platform facilitates community engagement by offering a homepage to explore all itineraries, detailed pages with daily entries, a comment section, and an itinerary editing page.
                     </p>
-                    <p className='mt-20 md:mt-0 row-start-3 col-span-12 md:row-start-2 md:col-span-5 col-start-1 md:col-start-7'>
-                        The project employed the XAMPP Development environment taught in IAT 352. PHP served for server-side processing, generating dynamic content, interacting with the MySQL database, and handling user requests. AJAX and jQuery enhanced user interaction, ensuring a responsive interface.
+                    <p className='mt-20 md:mt-0 row-start-3 col-span-12 md:row-start-2 md:col-span-6 col-start-1 md:col-start-7'>
+                        This project employed the XAMPP Development environment taught in IAT 352. PHP served for server-side processing, generating dynamic content, interacting with the MySQL database, and handling user requests. AJAX (Asynchronous JavaScript and XML) and jQuery enhanced user interaction, ensuring a responsive interface.
                     </p>
                 </section>
 
@@ -68,7 +68,7 @@ const ROAMFY: React.FC = () => {
                         <video className='mb-5' loop autoPlay muted >
                             <source src={editScreenCast} type="video/mp4" />
                         </video>
-                        <p className='text-base mb-40'>Itinerary filtering and AJAX editing page</p>
+                        <p className='text-base mb-40'>Itinerary filtering and editing page utilizing AJAX for responsive and asynchronous results</p>
 
                         <video className='mb-5' loop autoPlay muted >
                             <source src={commentScreenCast} type="video/mp4" />
