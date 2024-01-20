@@ -5,10 +5,17 @@ import Projects from './Projects';
 function Home() {
 
     return (
-        <>
-            <Hero />
-            <Skills />
-            <Projects />
+        <> 
+            <div id="abt-me">
+                <Hero />
+            </div>
+            <div id="expertise">
+                <Skills />
+            </div>
+            <div id="works">
+                <Projects />
+            </div>
+            
         </>
     )
 }

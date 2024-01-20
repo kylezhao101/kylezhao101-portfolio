@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section id="abt me" className="min-h-screen px-4 sm:px-20 bg-custom-background-gray">
+    <section className="min-h-screen px-4 sm:px-20 bg-custom-background-gray">
 
       <div className="pt-32 pb-20 sm:pt-52 sm:pb-20 2xl:pt-60 ">
         <p className="font-space">Hello, I'm</p>

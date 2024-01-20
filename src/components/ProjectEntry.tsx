@@ -17,7 +17,6 @@ const ProjectEntry: React.FC<ProjectEntryProps> = ({
     type,
     technologies,
     date,
-    repoLink,
     viewMoreLink,
     apiReferenceLink,
 }) => {

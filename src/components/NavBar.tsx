@@ -1,41 +1,82 @@
+import React, { useState, useEffect } from 'react';
+import { Link as RouterLink, useLocation } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
-import { Link as RouterLink } from 'react-router-dom';
-
-import React, { useState } from 'react';
 
 const NavBar: React.FC = () => {
     const [hoveredLink, setHoveredLink] = useState<string | null>(null);
-    const links = ["abt me", "expertise", "works", "contact"];
+    const location = useLocation();
+
+    const links = ["abt-me", "expertise", "works", "contact"];
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
+
+    useEffect(() => {
+        if (location.hash) {
+            let elem = document.getElementById(location.hash.slice(1));
+            if (elem) {
+                elem.scrollIntoView({ behavior: 'smooth' });
+            }
+        } else {
+            window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+        }
+    }, [location]);
 
     return (
-        <>
             <nav className='flex justify-between items-center font-mono px-4 sm:px-4 fixed top-0 left-0 right-0 py-3 z-10 bg-custom-background-gray'>
                 <div>
-                    <RouterLink to="/" className='font-neopixel text-xl hover:text-custom-blue duration-300 transition-colors ease-in-out'>
+                    <RouterLink
+                        to="/"
+                        className='font-neopixel text-xl hover:text-custom-blue duration-300 transition-colors ease-in-out'
+                        onClick={scrollToTop}
+                    >
                         Kyle.z
                     </RouterLink>
                 </div>
 
                 <div className="text-sm font-space hidden md:flex">
-                    {links.map((target, index) => (
-                        <ScrollLink
-                            key={index}
-                            to={target}
-                            smooth={true}
-                            duration={500}
-                            className='hover:cursor-pointer px-3 hover:text-custom-blue'
-                            onMouseEnter={() => setHoveredLink(target)}
-                            onMouseLeave={() => setHoveredLink(null)}
-                            style={{
-                                opacity: hoveredLink === target || hoveredLink === null ? 1 : 0.3,
-                                transition: 'opacity 0.3s ease-in-out',
-                            }}
-                        >
-                            / 0{index + 1} {target.charAt(0).toUpperCase() + target.slice(1)} {/* since the section ids are all lowercased */}
-                        </ScrollLink>
-                    ))}
+                    {links.map((target, index) => {
+                        if (target === 'contact') {
+                            return (
+                                <ScrollLink
+                                    key={index}
+                                    to={target}
+                                    smooth={true}
+                                    duration={500}
+                                    className='hover:cursor-pointer px-3 hover:text-custom-blue'
+                                    onMouseEnter={() => setHoveredLink(target)}
+                                    onMouseLeave={() => setHoveredLink(null)}
+                                    style={{
+                                        opacity: hoveredLink === target || hoveredLink === null ? 1 : 0.3,
+                                        transition: 'opacity 0.3s ease-in-out',
+                                    }}
+                                >
+                                    / 0{index + 1} {target.charAt(0).toUpperCase() + target.slice(1)}
+                                </ScrollLink>
+                            );
+                        } else {
+                            return (
+                                <RouterLink
+                                    key={index}
+                                    to={`/#${target}`}
+                                    className='hover:cursor-pointer px-3 hover:text-custom-blue'
+                                    onMouseEnter={() => setHoveredLink(target)}
+                                    onMouseLeave={() => setHoveredLink(null)}
+                                    style={{
+                                        opacity: hoveredLink === target || hoveredLink === null ? 1 : 0.3,
+                                        transition: 'opacity 0.3s ease-in-out',
+                                    }}
+                                >
+                                    / 0{index + 1} {target.charAt(0).toUpperCase() + target.slice(1)}
+                                </RouterLink>
+                            );
+                        }
+                    })}
                 </div>
-
                 <ScrollLink
                     to="contact"
                     smooth={true}
@@ -45,7 +86,6 @@ const NavBar: React.FC = () => {
                     Contact
                 </ScrollLink>
             </nav>
-        </>
     );
 };
 

@@ -4,7 +4,7 @@ import projectsData from '../../projectsData'
 const Projects: React.FC = () => {
     return (
         <>
-            <section id="works" className="pt-40 a-section bg-custom-background-gray">
+            <section className="pt-40 a-section bg-custom-background-gray">
                 <div className="flex items-center overflow-hidden ">
                     <h2 className="a-section-marquee-text text-4xl md:text-5xl lg:text-8xl font-space"> MY PROJECTS//MY PROJECTS//MY PROJECTS//</h2>
                     <h2 className="a-section-marquee-text text-4xl md:text-5xl lg:text-8xl font-space"> MY PROJECTS//MY PROJECTS//MY PROJECTS//</h2>

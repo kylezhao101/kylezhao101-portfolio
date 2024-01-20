@@ -8,7 +8,7 @@ const Skills: React.FC = () => {
   };
 
   return (
-    <section id="expertise" className="min-screen px-4 pt-40 sm:pt-0 sm:px-20 bg-custom-background-gray">
+    <section className="min-screen px-4 pt-40 sm:pt-0 sm:px-20 bg-custom-background-gray">
       <div className="flex items-start mb-5">
         <div className="bg-custom-blue w-3 h-3 mr-3 mt-2"></div>
         <h3 className="font-space text-xl">My expertise</h3>
