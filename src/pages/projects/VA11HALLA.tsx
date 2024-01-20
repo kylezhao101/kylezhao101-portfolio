@@ -94,7 +94,7 @@ const SFUEA: React.FC = () => {
                     </div>
                 </section>
 
-                <section className='px-4 lg:px-20 grid grid-cols-12 pb-20 md:my-10'>
+                <section className='px-4 lg:px-20 grid grid-cols-12 md:mt-5'>
 
                     <h3 className='row-start-1 col-span-full md:col-span-5 text-2xl mb-5'>Figma Component Design</h3>
                     <div className='mb-20 row-start-2 col-span-12 md:col-span-5'>
@@ -113,9 +113,6 @@ const SFUEA: React.FC = () => {
                     <div className='row-start-5 col-span-full md:row-start-3 md:col-start-7 md:col-span-6'>
                         {<img src={figmaShot2} alt={va11hallaProject.title} className="w-full" />}
                     </div>
-
-
-
                 </section>
 
                 <section className='px-4 lg:px-20 grid grid-cols-12 md:my-10'>
@@ -131,7 +128,7 @@ const SFUEA: React.FC = () => {
                         </video>
                         <p className='text-base mb-40'> Search bar and Primary Flavour toggle</p>
 
-                        <video className='mb-b' loop autoPlay muted >
+                        <video className='mb-5' loop autoPlay muted >
                             <source src={sortScreenCast} type="video/mp4" />
                         </video>
                         <p className='text-base mb-40'>Secondary flavor and sorting</p>
