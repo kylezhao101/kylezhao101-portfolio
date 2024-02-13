@@ -36,7 +36,6 @@ const Contact: React.FC = () => {
                     <div className='mb-5 w-min'>
                         <a className="hover:text-custom-blue" href="https://github.com/kylezhao101" target="_blank" rel="noopener noreferrer"><p>GitHub</p></a>
                         <a className="hover:text-custom-blue" href="https://www.linkedin.com/in/kyle-zhao-397452216/" target="_blank" rel="noopener noreferrer"><p>LinkedIn</p></a>
-                        <br></br>
                         <a className="hover:text-custom-blue" href="/Kyle-Zhao-Resume.pdf" target="_blank" rel="noopener noreferrer"><p>Resume</p></a>
                     </div>
 
@@ -48,10 +47,10 @@ const Contact: React.FC = () => {
 
                 <div className='row-start-2 col-span-4 sm:col-start-1 sm:col-span-4 md:col-start-5 lg:col-span-3 lg:col-start-7 font-space mb-5'>
                     <a
-                        href="mailto:kylezhao101@gmail.com"
+                        href="mailto:kzz@sfu.ca"
                         className="rounded-full text-xl px-4 border-2 border-black  hover:border-custom-blue hover:text-custom-blue duration-200 ease-in-out"
                     >
-                        kylezhao101@gmail.com
+                        kzz@sfu.ca
                     </a>
                     <p className="mt-5">(Open for work)</p>
                     <p className="mt-5">Vancouver, Canada</p>
