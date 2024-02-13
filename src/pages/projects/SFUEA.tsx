@@ -48,8 +48,8 @@ const SFUEA: React.FC = () => {
 
       <section className="b-section bg-custom-background-gray">
         <div className="mt-20 flex items-center overflow-hidden ">
-          <h2 className="text-custom-gray b-section-marquee-text text-4xl md:text-5xl lg:text-8xl font-space"> SFU ESPORTS ASSOCIATION//</h2>
-          <h2 className="text-custom-gray b-section-marquee-text text-4xl md:text-5xl lg:text-8xl font-space"> SFU ESPORTS ASSOCIATION//</h2>
+          <h2 className="text-custom-gray b-section-marquee-text text-4xl md:text-5xl lg:text-8xl font-space"> SFU ESPORTS ASSOCIATION // SFU ESPORTS ASSOCIATION //</h2>
+          <h2 className="text-custom-gray b-section-marquee-text text-4xl md:text-5xl lg:text-8xl font-space"> SFU ESPORTS ASSOCIATION // SFU ESPORTS ASSOCIATION //</h2>
         </div>
       </section>
 

@@ -13,7 +13,7 @@ export default {
       },
       colors: {
         'custom-blue': '#3945FC',
-        'custom-gray': '#CBCBCB',
+        'custom-gray': '#BEBEBE',
         'custom-background-gray': '#E8ECF1'
       },
     },

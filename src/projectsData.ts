@@ -27,7 +27,7 @@ const projectsData = [
         pageImageCaption: 'Mockup of the recipe dashboard',
     },
     {
-        title: 'Resume REST API',
+        title: 'My Resume REST API',
         type: 'Backend // CRUD // Auth',
         technologies: ['MongoDB', 'Express', 'Node'],
         date: '10.2023',

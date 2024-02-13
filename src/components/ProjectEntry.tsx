@@ -56,9 +56,10 @@ const ProjectEntry: React.FC<ProjectEntryProps> = ({
                 onMouseEnter={() => setProjectHovered(true)}
                 onMouseLeave={() => setProjectHovered(false)}
             >
-                <div className='row-start-2 lg:row-start-1 col-span-4 lg:col-span-6 flex flex-col justify-center'>
+                <div className='row-start-2 lg:row-start-1 col-span-4 sm:col-span-full lg:col-span-6 flex flex-col justify-center'>
 
-                    <h2 className={`text-4xl sm:text-5xl font-space mb-5 pt-5 lg:pt-0`}>{title}</h2>
+                    <h2 className={`text-4xl xl:text-6xl font-space mb-5 pt-5 lg:pt-0`}>{title}</h2>
+                    <p className="font-space col-span-4 lg:row-start-1 lg:col-start-1 lg:col-span-3 mb-10">{type}</p>
 
                     <div className='flex w-fit'
                         onMouseEnter={() => setHovered(true)}
@@ -109,7 +110,6 @@ const ProjectEntry: React.FC<ProjectEntryProps> = ({
                 </div>
             </Link>
             <div className={`grid grid-cols-4 sm:grid-cols-8 lg:grid-cols-12 gap-0 font-space pb-10 pt-5 border-b transition duration-300 ease-in-out ${isHovered ? 'border-custom-blue' : 'border-custom-gray'}`}>
-                <p className="col-span-4 lg:row-start-1 lg:col-start-1 lg:col-span-3">{type}</p>
                 <p className="row-start-2 pt-10 lg:pt-0 col-span-2 sm:col-span-6 lg:col-start-7 lg:row-start-1 lg:col-span-3">{techString}</p>
                 <p className="row-start-2  col-start-4 col-span-2 sm:col-span-4 lg:row-start-1 lg:col-start-12 lg:col-span-3 flex self-end justify-end">{date}</p>
             </div>

@@ -44,12 +44,9 @@ const Hero: React.FC = () => {
 
         <div className="swipe col-start-1 col-span-4 sm:col-span-4 md:col-start-5 md:col-span-4 lg:col-start-4 lg:col-span-3 font-space mr-5">
           <p className='swipe-text'>
-            Studying  @ the SFU School of Interactive arts and Technology (SIAT)
+            Studying  @ Simon Fraser University's School of Interactive Arts and Technology (SIAT)
           </p>
           <br></br>
-          <p className="swipe-text text-custom-gray">
-            Vancouver, 49.2827° N, 123.1207° W
-          </p>
           <p className="swipe-text text-custom-gray">
             {formatTimeInTimeZone(currentTime, 'America/Vancouver')} (pst)
           </p>

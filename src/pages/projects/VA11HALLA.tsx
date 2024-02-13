@@ -24,7 +24,7 @@ const SFUEA: React.FC = () => {
     const va11hallaProject = projectsData.find((project) => project.title === 'VA11-Hall-A Drinktionary Fansite');
 
     if (!va11hallaProject) {
-        return <div>No SFU Esports Association project found</div>;
+        return <div>No project found</div>;
     }
     return (
         <>
