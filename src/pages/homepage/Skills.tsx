@@ -4,7 +4,7 @@ const Skills: React.FC = () => {
     backEnd: ["Node", "Express", "PHP", "Flask"],
     dataBases: ["MySQL", "MongoDB", "Firebase"],
     designTools: ["Figma", "Adobe Photoshop"],
-    otherLanguages: ["Python", "Java", "C / C++"]
+    otherLanguages: ["Python", "Java", "C / C++"],
   };
 
   type SkillCategory = keyof typeof skills;
@@ -14,7 +14,7 @@ const Skills: React.FC = () => {
     backEnd: "Back-end",
     dataBases: "Databases",
     designTools: "Design Tools",
-    otherLanguages: "Other Languages"
+    otherLanguages: "Other Languages",
   };
 
   return (
@@ -32,19 +32,28 @@ const Skills: React.FC = () => {
       </div>
       <div className="font-space grid grid-cols-4 sm:grid-cols-8 lg:grid-cols-12 gap-0 pt-5">
         <div className="col-start-1 row-start-1 col-span-4 sm:col-span-6 lg:col-span-4">
-          <p className="mt-20">My skill set revolves around design and web development, aiming to provide impactful digital experiences.</p>
-          <p className="mt-5 mb-10">I leverage a versatile tech stack, always eager to explore new technologies and expand my horizons for every project.</p>
+          <p className="mt-20">
+            My skill set revolves around design and web development, aiming to
+            provide impactful digital experiences.
+          </p>
+          <p className="mt-5 mb-10">
+            I leverage a versatile tech stack, always eager to explore new
+            technologies and expand my horizons for every project.
+          </p>
         </div>
         <div className="row-start-2 col-span-full lg:row-start-1 lg:col-start-7 font-space flex flex-wrap flex-row leading-normal">
           {Object.entries(skills).map(([category, skillsList]) => (
             <ul key={category} className="w-1/2 pb-5">
-              <li className="text-xl text-custom-gray">{categoryTitles[category as SkillCategory]}</li>
+              <li className="text-xl text-custom-gray">
+                {categoryTitles[category as SkillCategory]}
+              </li>
               {skillsList.map((skill, index) => (
-                <li className="text-xl" key={index}>{skill}</li>
+                <li className="text-xl" key={index}>
+                  {skill}
+                </li>
               ))}
             </ul>
-          ))
-          }
+          ))}
         </div>
       </div>
     </section>

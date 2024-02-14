@@ -1,92 +1,96 @@
-import React, { useState, useEffect } from 'react';
-import { Link as RouterLink, useLocation } from 'react-router-dom';
-import { Link as ScrollLink } from 'react-scroll';
+import React, { useState, useEffect } from "react";
+import { Link as RouterLink, useLocation } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 
 const NavBar: React.FC = () => {
-    const [hoveredLink, setHoveredLink] = useState<string | null>(null);
-    const location = useLocation();
+  const [hoveredLink, setHoveredLink] = useState<string | null>(null);
+  const location = useLocation();
 
-    const links = ["abt-me", "expertise", "works", "contact"];
+  const links = ["abt-me", "expertise", "works", "contact"];
 
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-        });
-    };
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
-    useEffect(() => {
-        if (location.hash) {
-            let elem = document.getElementById(location.hash.slice(1));
-            if (elem) {
-                elem.scrollIntoView({ behavior: 'smooth' });
-            }
-        } else {
-            window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-        }
-    }, [location]);
+  useEffect(() => {
+    if (location.hash) {
+      let elem = document.getElementById(location.hash.slice(1));
+      if (elem) {
+        elem.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    }
+  }, [location]);
 
-    return (
-        <nav className='flex justify-between items-center font-mono px-4 sm:px-4 fixed top-0 left-0 right-0 py-3 z-10 bg-custom-background-gray'>
-            <div>
-                <RouterLink
-                    to="/"
-                    className='font-neopixel text-xl hover:text-custom-blue duration-300 transition-colors ease-in-out'
-                    onClick={scrollToTop}
-                >
-                    Kyle.z
-                </RouterLink>
-            </div>
+  return (
+    <nav className="flex justify-between items-center font-mono px-4 sm:px-4 fixed top-0 left-0 right-0 py-3 z-10 bg-custom-background-gray">
+      <div>
+        <RouterLink
+          to="/"
+          className="font-neopixel text-xl hover:text-custom-blue duration-300 transition-colors ease-in-out"
+          onClick={scrollToTop}
+        >
+          Kyle.z
+        </RouterLink>
+      </div>
 
-            <div className="text-sm font-space hidden md:flex">
-                {links.map((target, index) => {
-                    if (target === 'contact') {
-                        return (
-                            <ScrollLink
-                                key={index}
-                                to={target}
-                                smooth={true}
-                                duration={500}
-                                className='hover:cursor-pointer px-3 '
-                                onMouseEnter={() => setHoveredLink(target)}
-                                onMouseLeave={() => setHoveredLink(null)}
-                                style={{
-                                    opacity: hoveredLink === target || hoveredLink === null ? 1 : 0.3,
-                                    transition: 'opacity 0.3s ease-in-out',
-                                }}
-                            >
-                                / 0{index + 1} {target.charAt(0).toUpperCase() + target.slice(1)}
-                            </ScrollLink>
-                        );
-                    } else {
-                        return (
-                            <RouterLink
-                                key={index}
-                                to={`/#${target}`}
-                                className='hover:cursor-pointer px-3 '
-                                onMouseEnter={() => setHoveredLink(target)}
-                                onMouseLeave={() => setHoveredLink(null)}
-                                style={{
-                                    opacity: hoveredLink === target || hoveredLink === null ? 1 : 0.3,
-                                    transition: 'opacity 0.3s ease-in-out',
-                                }}
-                            >
-                                / 0{index + 1} {target.charAt(0).toUpperCase() + target.slice(1)}
-                            </RouterLink>
-                        );
-                    }
-                })}
-            </div>
-            <a
-                href="/Kyle-Zhao-Resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:cursor-pointer font-space rounded-full px-5 py-1 text-sm text-custom-background-gray bg-black  hover:bg-custom-blue duration-300 ease-in-out"
-            >
-                Resume
-            </a>
-        </nav>
-    );
+      <div className="text-sm font-space hidden md:flex">
+        {links.map((target, index) => {
+          if (target === "contact") {
+            return (
+              <ScrollLink
+                key={index}
+                to={target}
+                smooth={true}
+                duration={500}
+                className="hover:cursor-pointer px-3 "
+                onMouseEnter={() => setHoveredLink(target)}
+                onMouseLeave={() => setHoveredLink(null)}
+                style={{
+                  opacity:
+                    hoveredLink === target || hoveredLink === null ? 1 : 0.3,
+                  transition: "opacity 0.3s ease-in-out",
+                }}
+              >
+                / 0{index + 1}{" "}
+                {target.charAt(0).toUpperCase() + target.slice(1)}
+              </ScrollLink>
+            );
+          } else {
+            return (
+              <RouterLink
+                key={index}
+                to={`/#${target}`}
+                className="hover:cursor-pointer px-3 "
+                onMouseEnter={() => setHoveredLink(target)}
+                onMouseLeave={() => setHoveredLink(null)}
+                style={{
+                  opacity:
+                    hoveredLink === target || hoveredLink === null ? 1 : 0.3,
+                  transition: "opacity 0.3s ease-in-out",
+                }}
+              >
+                / 0{index + 1}{" "}
+                {target.charAt(0).toUpperCase() + target.slice(1)}
+              </RouterLink>
+            );
+          }
+        })}
+      </div>
+      <a
+        href="/Kyle-Zhao-Resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:cursor-pointer font-space rounded-full px-5 py-1 text-sm text-custom-background-gray bg-black  hover:bg-custom-blue duration-300 ease-in-out"
+      >
+        Resume
+      </a>
+    </nav>
+  );
 };
 
 export default NavBar;
