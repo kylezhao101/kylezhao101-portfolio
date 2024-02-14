@@ -216,7 +216,6 @@ const SFUEA: React.FC = () => {
               <source src={searchScreenCast} type="video/mp4" />
             </video>
             <p className="mb-40 text-base">
-              {" "}
               Search bar and Primary Flavour toggle
             </p>
           </div>

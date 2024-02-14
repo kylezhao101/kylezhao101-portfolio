@@ -36,7 +36,7 @@ const projectsData = [
     image: roamfy,
     pageImage: roamfy,
     pageImageCaption: "Mockup of the homepage dashboard",
-    scope: "Academic Project. Teammate: Thomas Li",
+    scope: "Academic Project. Teammate/contributor: Thomas Li",
   },
   {
     title: "My Resume REST API",
