@@ -35,9 +35,9 @@ const projectsData = [
     },
     {
         title: 'SFU Esports Association',
-        type: 'Design Executive // GFX & player branding',
+        type: 'Design Executive // Graphic Design & player branding',
         technologies: ['Photoshop', 'Figma'],
-        date: '2022 - ongoing',
+        date: '08.2022 - ongoing',
         viewMoreLink: '/SFUEA',
         image: crown,
         pageImage: sunsetSeries,

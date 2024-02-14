@@ -15,10 +15,10 @@ import sortScreenCast from '../../assets/videos/va11halla/secondary-and-sort.mp4
 const SFUEA: React.FC = () => {
 
     // //brings to top of page
-    const location = useLocation();
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [location.pathname]);
+    // const location = useLocation();
+    // useEffect(() => {
+    //     window.scrollTo(0, 0);
+    // }, [location.pathname]);
 
     // Find the project with the title 'SFU Esports Association'
     const va11hallaProject = projectsData.find((project) => project.title === 'VA11-Hall-A Drinktionary Fansite');
@@ -33,7 +33,8 @@ const SFUEA: React.FC = () => {
                 <ProjectPageHeader project={va11hallaProject} />
 
                 <section className='px-4 lg:px-20 grid grid-cols-12 md:py-20'>
-                    <div className='my-20 md:mt-10 row-start-1 col-span-full md:col-span-5'>
+                    <div className='my-20 md:mt-10 row-start-1 col-span-full md:col-span-5 md:flex md:flex-col md:justify-center'>
+                        <h3 className='text-2xl mb-5'>Overview</h3>
                         <p>
                             A dashboard UI design/fan site that aims to provide a more user-friendly experience for accessing drink recipes from the 2016 visual novel <a className="underline hover:text-custom-blue" href='https://store.steampowered.com/app/447530/VA11_HallA_Cyberpunk_Bartender_Action/' target="_blank">Va-11 Hall-A by Sukeban Games.</a>
                             <br></br><br></br>
@@ -43,13 +44,13 @@ const SFUEA: React.FC = () => {
 
                     <div className='row-start-2 col-span-12 md:row-start-1 md:col-start-7 md:col-span-6'>
                         {<img src={voxelRoom} alt={va11hallaProject.title} className="w-full" />}
-                        <p className='text-custom-gray'>Animated voxel art of the main character's room made with MagicaVoxel, also implemented with Threejs</p>
+                        <p className='pt-2'>Voxel art of the main character's room made with MagicaVoxel, also implemented with Threejs</p>
                     </div>
                 </section>
 
                 <section className='px-4 lg:px-20 grid grid-cols-12 pb-20 gap-y-20 mt-20 md:mt-0'>
 
-                    <div className='row-start-1 col-span-full block md:col-span-5 md:flex md:flex-col md:justify-center'>
+                    <div className='row-start-1 col-span-full block md:col-span-5 md:flex md:flex-col md:justify-center min-h-max'>
                         <h3 className='text-2xl mb-5'>Some Context</h3>
                         <p>
                             The gameplay and dialogue of Va-11 Hall-a revolve and progress through bartending. Creating drinks involves the mixing of components and following preparation steps, which can result in flavors that match customer’s requests.
@@ -57,12 +58,11 @@ const SFUEA: React.FC = () => {
                             <br></br><br></br>
                             The choices of drinks and their proportions can influence the characters' moods and the direction of the narrative.
                         </p>
-
                     </div>
 
-                    <div className='row-start-2 col-span-full md:row-start-1 md:col-start-7 md:col-span-6 md:sticky md:top-40'>
+                    <div className='row-start-2 col-span-full md:row-start-1 md:col-start-7 md:col-span-6 md:sticky md:top-1/4'>
                         {<img src={ingameShot} alt={va11hallaProject.title} className="w-full" />}
-                        <p className='text-custom-gray'>In-game screenshot of the drink mixing interface</p>
+                        <p className='pt-2'>In-game screenshot of the drink mixing interface</p>
                     </div>
 
                     <div className='row-start-3 col-span-full md:row-start-2 md:col-span-5'>
@@ -116,23 +116,38 @@ const SFUEA: React.FC = () => {
                 </section>
 
                 <section className='px-4 lg:px-20 grid grid-cols-12 md:my-10'>
-                    <div className='mt-20 col-span-full col-start-1 md:col-start-2 md:col-span-10 lg:col-start-3  lg:col-span-8'>
+
+                    <div className='mt-20 col-span-full md:col-span-10 lg:col-span-8'>
                         <h3 className='text-2xl mb-5'>Implementation: Multi-layered Search and Fitlering of drinks</h3>
                         <p className='md:w-3/4 mb-20'>
                             In essence, the React implementation utilizes the Firebase SDK to fetch drink data from Firestore, organized in a 'drinks' collection. The data is then stored in the component's state with useState. Sorting options like name, price, or flavor are available, optimized using useMemo to prevent unnecessary recalculations.
                             <br></br><br></br>
                             The sorting considers user-selected options such as search query, types, flavor, and sorting criteria for an efficient and responsive user experience, allowing easy exploration and selection of drinks.
                         </p>
-                        <video className='mb-5' loop autoPlay muted >
+                    </div>
+
+                    <div className='col-span-9'>
+                        <video className='mb-2' loop autoPlay muted >
                             <source src={searchScreenCast} type="video/mp4" />
                         </video>
                         <p className='text-base mb-40'> Search bar and Primary Flavour toggle</p>
+                    </div>
 
-                        <video className='mb-5' loop autoPlay muted >
+                    <div className='col-span-9'>
+                        <video className='mb-2' loop autoPlay muted >
                             <source src={sortScreenCast} type="video/mp4" />
                         </video>
-                        <p className='text-base'>Secondary flavor and sorting</p>
+                        <p className='text-base mb-40'>Secondary flavor and sorting</p>
                     </div>
+                </section>
+
+                <section className='px-4 lg:px-20 '>
+                    <h3 className='text-2xl mb-5'>Project Reflection</h3>
+                    <p className='md:w-3/4 mb-20'>
+                        In essence, the React implementation utilizes the Firebase SDK to fetch drink data from Firestore, organized in a 'drinks' collection. The data is then stored in the component's state with useState. Sorting options like name, price, or flavor are available, optimized using useMemo to prevent unnecessary recalculations.
+                        <br></br><br></br>
+                        The sorting considers user-selected options such as search query, types, flavor, and sorting criteria for an efficient and responsive user experience, allowing easy exploration and selection of drinks.
+                    </p>
                 </section>
 
                 <ProjectNav projectsData={projectsData} />
