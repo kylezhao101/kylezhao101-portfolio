@@ -34,7 +34,7 @@ const SFUEA: React.FC = () => {
 
 
   return (
-    <section className='font-space bg-custom-background-gray pt-20'>
+    <section className='font-space bg-custom-background-gray'>
 
       <ProjectPageHeader project={sfueaProject}/>
 

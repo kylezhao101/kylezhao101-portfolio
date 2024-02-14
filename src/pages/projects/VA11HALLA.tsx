@@ -15,12 +15,11 @@ import sortScreenCast from '../../assets/videos/va11halla/secondary-and-sort.mp4
 const SFUEA: React.FC = () => {
 
     // //brings to top of page
-    // const location = useLocation();
-    // useEffect(() => {
-    //     window.scrollTo(0, 0);
-    // }, [location.pathname]);
+    const location = useLocation();
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location.pathname]);
 
-    // Find the project with the title 'SFU Esports Association'
     const va11hallaProject = projectsData.find((project) => project.title === 'VA11-Hall-A Drinktionary Fansite');
 
     if (!va11hallaProject) {
@@ -28,7 +27,7 @@ const SFUEA: React.FC = () => {
     }
     return (
         <>
-            <section className='font-space bg-custom-background-gray pt-20'>
+            <section className='font-space bg-custom-background-gray'>
 
                 <ProjectPageHeader project={va11hallaProject} />
 
@@ -126,14 +125,14 @@ const SFUEA: React.FC = () => {
                         </p>
                     </div>
 
-                    <div className='col-span-9'>
+                    <div className='col-span-full xl:col-span-9'>
                         <video className='mb-2' loop autoPlay muted >
                             <source src={searchScreenCast} type="video/mp4" />
                         </video>
                         <p className='text-base mb-40'> Search bar and Primary Flavour toggle</p>
                     </div>
 
-                    <div className='col-span-9'>
+                    <div className='col-span-full xl:col-span-9'>
                         <video className='mb-2' loop autoPlay muted >
                             <source src={sortScreenCast} type="video/mp4" />
                         </video>
@@ -142,11 +141,9 @@ const SFUEA: React.FC = () => {
                 </section>
 
                 <section className='px-4 lg:px-20 '>
-                    <h3 className='text-2xl mb-5'>Project Reflection</h3>
-                    <p className='md:w-3/4 mb-20'>
-                        In essence, the React implementation utilizes the Firebase SDK to fetch drink data from Firestore, organized in a 'drinks' collection. The data is then stored in the component's state with useState. Sorting options like name, price, or flavor are available, optimized using useMemo to prevent unnecessary recalculations.
-                        <br></br><br></br>
-                        The sorting considers user-selected options such as search query, types, flavor, and sorting criteria for an efficient and responsive user experience, allowing easy exploration and selection of drinks.
+                    <h3 className='text-2xl mb-5'>Reflection</h3>
+                    <p className='md:w-3/4 lg:w-1/2 mb-20'>
+                        Through this project, I had the opportunity to delve into web development technologies and successfully turn a concept into a functional design. I recognize that this project leaned more towards the development aspect, with the design of the dashboard serving primarily as an exercise. It was built upon the game's existing search mechanics, informed by my knowledge of the game and the players' needs when searching for drinks. Nonetheless, I may likely continue to build on this site if I have time or look for more community / fan-content to build.
                     </p>
                 </section>
 

@@ -9,6 +9,9 @@ interface ProjectDetails {
     date: string;
     repoLink?: string;
     pageImageCaption?: string;
+    scope?: string;
+    timeSpan?: string;
+    timeDescription?: string;
 }
 interface ProjectDetailProps {
     project: ProjectDetails;
@@ -20,7 +23,7 @@ const ProjectPageHeader: React.FC<ProjectDetailProps> = ({ project }) => {
 
     return (
 
-        <section className='px-4 lg:px-20 grid grid-cols-12'>
+        <section className='px-4 lg:px-20 grid grid-cols-12 pt-20'>
 
             <div className='row-start-1 col-span-full md:col-span-5 md:flex md:flex-col md:justify-end'>
                 <div className='swipe'>
@@ -30,7 +33,7 @@ const ProjectPageHeader: React.FC<ProjectDetailProps> = ({ project }) => {
                 {project.repoLink && (
                     <Link
                         to={project.repoLink}
-                        target=""
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="swipe flex items-center hover:text-custom-blue transition duration-200 ease-in-out w-fit"
                     >
@@ -39,24 +42,24 @@ const ProjectPageHeader: React.FC<ProjectDetailProps> = ({ project }) => {
                         </p>
                     </Link>
                 )}
-                <div className='row-start-2 col-start-7 col-span-7 flex flex-wrap gap-5 mt-20'>
-                    <div>
+                <div className='row-start-2 col-start-7 col-span-7 flex flex-wrap  mt-20'>
+                    <div className='w-1/2 pr-5 pb-5'>
                         <p className='font-bold'>Tools</p>
                         <p className='w-3/4'>{techString}</p>
                     </div>
-                    <div>
+                    <div className='w-1/2 pr-5 pb-5'>
                         <p className='font-bold'>Timespan</p>
-                        <p>{project.date} - 10.2023</p>
+                        <p>{project.timeSpan}</p>
+                        <p>{project.timeDescription}</p>
                     </div>
-
-                    <div>
+                    <div className='w-1/2 pr-5 pb-5'>
                         <p className='font-bold'>Type</p>
-                        <p>Independent & personal project</p>
+                        <p>{project.scope}</p>
                     </div>
                 </div>
             </div>
 
-            <div className='row-start-2 col-span-12 md:row-start-1 md:col-start-7 md:col-span-6'>
+            <div className='row-start-2 col-span-12 md:row-start-1 md:col-start-7 md:col-span-6 mt-10'>
                 {<img src={project.pageImage} alt={project.title} className="w-full" />}
                 <p className='pt-2'>{project.pageImageCaption}</p>
             </div>
