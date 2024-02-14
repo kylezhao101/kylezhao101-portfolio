@@ -21,10 +21,10 @@ const ProjectPageHeader: React.FC<ProjectDetailProps> = ({ project }) => {
   const techString = project.technologies.join(", ");
 
   return (
-    <section className="px-4 lg:px-20 grid grid-cols-12 pt-20">
-      <div className="row-start-1 col-span-full md:col-span-5 md:flex md:flex-col md:justify-end">
+    <section className="grid grid-cols-12 px-4 pt-20 lg:px-20">
+      <div className="col-span-full row-start-1 md:col-span-5 md:flex md:flex-col md:justify-end">
         <div className="swipe">
-          <h2 className="swipe-text text-4xl xl:text-6xl mb-5 pt-5 lg:pt-0">
+          <h2 className="swipe-text mb-5 pt-5 text-4xl lg:pt-0 xl:text-6xl">
             {project.title}
           </h2>
           <p className="swipe-text text-custom-blue">{project.type}</p>
@@ -34,29 +34,29 @@ const ProjectPageHeader: React.FC<ProjectDetailProps> = ({ project }) => {
             to={project.repoLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="swipe flex items-center hover:text-custom-blue transition duration-200 ease-in-out w-fit"
+            className="swipe flex w-fit items-center transition duration-200 ease-in-out hover:text-custom-blue"
           >
             <p className="swipe-text">View Repository</p>
           </Link>
         )}
-        <div className="row-start-2 col-start-7 col-span-7 flex flex-wrap  mt-20">
-          <div className="w-1/2 pr-5 pb-5">
+        <div className="col-span-7 col-start-7 row-start-2 mt-20 flex  flex-wrap">
+          <div className="w-1/2 pb-5 pr-5">
             <p className="font-bold">Tools</p>
             <p className="w-3/4">{techString}</p>
           </div>
-          <div className="w-1/2 pr-5 pb-5">
+          <div className="w-1/2 pb-5 pr-5">
             <p className="font-bold">Timespan</p>
             <p>{project.timeSpan}</p>
             <p>{project.timeDescription}</p>
           </div>
-          <div className="w-1/2 pr-5 pb-5">
+          <div className="w-1/2 pb-5 pr-5">
             <p className="font-bold">Type</p>
             <p>{project.scope}</p>
           </div>
         </div>
       </div>
 
-      <div className="row-start-2 col-span-12 md:row-start-1 md:col-start-7 md:col-span-6 mt-10">
+      <div className="col-span-12 row-start-2 mt-10 md:col-span-6 md:col-start-7 md:row-start-1">
         {<img src={project.pageImage} alt={project.title} className="w-full" />}
         <p className="pt-2">{project.pageImageCaption}</p>
       </div>

@@ -26,16 +26,16 @@ const Contact: React.FC = () => {
   return (
     <section
       id="contact"
-      className="px-4 sm:px-20 pb-20 bg-custom-background-gray pt-60"
+      className="bg-custom-background-gray px-4 pb-20 pt-60 sm:px-20"
     >
-      <div className="grid grid-cols-4 sm:grid-cols-8 lg:grid-cols-12 gap-0">
-        <div className="col-start-1 lg:col-start-2 col-span-8">
-          <h2 className="font-neopixel text-5xl mb-20 sm:text-7xl md:mb-10">
+      <div className="grid grid-cols-4 gap-0 sm:grid-cols-8 lg:grid-cols-12">
+        <div className="col-span-8 col-start-1 lg:col-start-2">
+          <h2 className="mb-20 font-neopixel text-5xl sm:text-7xl md:mb-10">
             Get in touch
           </h2>
         </div>
 
-        <div className="row-start-3 col-span-4 sm:col-start-1 sm:col-span-4 md:row-start-2 lg:col-start-2 font-space">
+        <div className="col-span-4 row-start-3 font-space sm:col-span-4 sm:col-start-1 md:row-start-2 lg:col-start-2">
           <div className="mb-5 w-min">
             <a
               className="hover:text-custom-blue"
@@ -69,10 +69,10 @@ const Contact: React.FC = () => {
           </div>
         </div>
 
-        <div className="row-start-2 col-span-4 sm:col-start-1 sm:col-span-4 md:col-start-5 lg:col-span-3 lg:col-start-7 font-space mb-5">
+        <div className="col-span-4 row-start-2 mb-5 font-space sm:col-span-4 sm:col-start-1 md:col-start-5 lg:col-span-3 lg:col-start-7">
           <a
             href="mailto:kzz@sfu.ca"
-            className="rounded-full text-xl px-4 border-2 border-black  hover:border-custom-blue hover:text-custom-blue duration-200 ease-in-out"
+            className="rounded-full border-2 border-black px-4 text-xl  duration-200 ease-in-out hover:border-custom-blue hover:text-custom-blue"
           >
             kzz@sfu.ca
           </a>

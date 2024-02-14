@@ -27,18 +27,18 @@ const NavBar: React.FC = () => {
   }, [location]);
 
   return (
-    <nav className="flex justify-between items-center font-mono px-4 sm:px-4 fixed top-0 left-0 right-0 py-3 z-10 bg-custom-background-gray">
+    <nav className="fixed left-0 right-0 top-0 z-10 flex items-center justify-between bg-custom-background-gray px-4 py-3 font-mono sm:px-4">
       <div>
         <RouterLink
           to="/"
-          className="font-neopixel text-xl hover:text-custom-blue duration-300 transition-colors ease-in-out"
+          className="font-neopixel text-xl transition-colors duration-300 ease-in-out hover:text-custom-blue"
           onClick={scrollToTop}
         >
           Kyle.z
         </RouterLink>
       </div>
 
-      <div className="text-sm font-space hidden md:flex">
+      <div className="hidden font-space text-sm md:flex">
         {links.map((target, index) => {
           if (target === "contact") {
             return (
@@ -47,7 +47,7 @@ const NavBar: React.FC = () => {
                 to={target}
                 smooth={true}
                 duration={500}
-                className="hover:cursor-pointer px-3 "
+                className="px-3 hover:cursor-pointer "
                 onMouseEnter={() => setHoveredLink(target)}
                 onMouseLeave={() => setHoveredLink(null)}
                 style={{
@@ -65,7 +65,7 @@ const NavBar: React.FC = () => {
               <RouterLink
                 key={index}
                 to={`/#${target}`}
-                className="hover:cursor-pointer px-3 "
+                className="px-3 hover:cursor-pointer "
                 onMouseEnter={() => setHoveredLink(target)}
                 onMouseLeave={() => setHoveredLink(null)}
                 style={{
@@ -85,7 +85,7 @@ const NavBar: React.FC = () => {
         href="/Kyle-Zhao-Resume.pdf"
         target="_blank"
         rel="noopener noreferrer"
-        className="hover:cursor-pointer font-space rounded-full px-5 py-1 text-sm text-custom-background-gray bg-black  hover:bg-custom-blue duration-300 ease-in-out"
+        className="rounded-full bg-black px-5 py-1 font-space text-sm text-custom-background-gray duration-300  ease-in-out hover:cursor-pointer hover:bg-custom-blue"
       >
         Resume
       </a>

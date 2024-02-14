@@ -4,20 +4,20 @@ import projectsData from "../../projectsData";
 const Projects: React.FC = () => {
   return (
     <>
-      <section className="pt-40 a-section bg-custom-background-gray">
+      <section className="a-section bg-custom-background-gray pt-40">
         <div className="flex items-center overflow-hidden ">
-          <h2 className="a-section-marquee-text text-4xl md:text-5xl lg:text-8xl font-space">
+          <h2 className="a-section-marquee-text font-space text-4xl md:text-5xl lg:text-8xl">
             {" "}
             MY PROJECTS // MY PROJECTS // MY PROJECTS //
           </h2>
-          <h2 className="a-section-marquee-text text-4xl md:text-5xl lg:text-8xl font-space">
+          <h2 className="a-section-marquee-text font-space text-4xl md:text-5xl lg:text-8xl">
             {" "}
             MY PROJECTS // MY PROJECTS // MY PROJECTS //
           </h2>
         </div>
       </section>
 
-      <section className="px-4 sm:px-20 bg-custom-background-gray ">
+      <section className="bg-custom-background-gray px-4 sm:px-20 ">
         {projectsData.map((project, index) => (
           <ProjectEntry
             key={index}

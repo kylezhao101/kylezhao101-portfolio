@@ -24,23 +24,23 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section className="min-h-screen px-4 sm:px-20 bg-custom-background-gray">
-      <div className="pt-32 pb-20 sm:pt-52 sm:pb-20 2xl:pt-60 ">
+    <section className="min-h-screen bg-custom-background-gray px-4 sm:px-20">
+      <div className="pb-20 pt-32 sm:pb-20 sm:pt-52 2xl:pt-60 ">
         <p className="font-space">Hello, I'm</p>
         <h1 className="font-neopixel text-8xl md:text-9xl">Kyle Zhao</h1>
       </div>
 
-      <div className="grid grid-cols-4 gap-5 sm:grid-cols-8 md:grid-cols-8 lg:grid-cols-12 sm:gap-0">
-        <div className="col-span-4 sm:col-span-3 flex items-start">
-          <div className="bg-custom-blue w-3 h-3 mr-3 mt-2"></div>
+      <div className="grid grid-cols-4 gap-5 sm:grid-cols-8 sm:gap-0 md:grid-cols-8 lg:grid-cols-12">
+        <div className="col-span-4 flex items-start sm:col-span-3">
+          <div className="mr-3 mt-2 h-3 w-3 bg-custom-blue"></div>
           <div className="swipe">
-            <h3 className="swipe-text font-space text-xl mr-5">
+            <h3 className="swipe-text mr-5 font-space text-xl">
               Designer + Developer
             </h3>
           </div>
         </div>
 
-        <div className="swipe col-start-1 col-span-4 sm:col-span-4 md:col-start-5 md:col-span-4 lg:col-start-4 lg:col-span-3 font-space mr-5">
+        <div className="swipe col-span-4 col-start-1 mr-5 font-space sm:col-span-4 md:col-span-4 md:col-start-5 lg:col-span-3 lg:col-start-4">
           <p className="swipe-text">
             Studying @ Simon Fraser University's School of Interactive Arts and
             Technology (SIAT)
@@ -51,7 +51,7 @@ const Hero: React.FC = () => {
           </p>
         </div>
 
-        <div className="pt-40 col-span-4 col-start-1 sm:pl-5 sm:col-span-8 sm:pt-10 md:col-span-8 lg:col-span-5 font-space lg:col-start-7 lg:pt-0 ">
+        <div className="col-span-4 col-start-1 pt-40 font-space sm:col-span-8 sm:pl-5 sm:pt-10 md:col-span-8 lg:col-span-5 lg:col-start-7 lg:pt-0 ">
           <div className="swipe">
             <p className="swipe-text text-2xl leading-snug">
               An enthusiast for all things development, graphic design, and

@@ -28,12 +28,12 @@ const SFUEA: React.FC = () => {
   }
   return (
     <>
-      <section className="font-space bg-custom-background-gray">
+      <section className="bg-custom-background-gray font-space">
         <ProjectPageHeader project={va11hallaProject} />
 
-        <section className="px-4 lg:px-20 grid grid-cols-12 md:py-20">
-          <div className="my-20 md:mt-10 row-start-1 col-span-full md:col-span-5 md:flex md:flex-col md:justify-center">
-            <h3 className="text-2xl mb-5">Overview</h3>
+        <section className="grid grid-cols-12 px-4 md:py-20 lg:px-20">
+          <div className="col-span-full row-start-1 my-20 md:col-span-5 md:mt-10 md:flex md:flex-col md:justify-center">
+            <h3 className="mb-5 text-2xl">Overview</h3>
             <p>
               A dashboard UI design/fan site that aims to provide a more
               user-friendly experience for accessing drink recipes from the 2016
@@ -52,7 +52,7 @@ const SFUEA: React.FC = () => {
             </p>
           </div>
 
-          <div className="row-start-2 col-span-12 md:row-start-1 md:col-start-7 md:col-span-6">
+          <div className="col-span-12 row-start-2 md:col-span-6 md:col-start-7 md:row-start-1">
             {
               <img
                 src={voxelRoom}
@@ -67,9 +67,9 @@ const SFUEA: React.FC = () => {
           </div>
         </section>
 
-        <section className="px-4 lg:px-20 grid grid-cols-12 pb-20 gap-y-20 mt-20 md:mt-0">
-          <div className="row-start-1 col-span-full block md:col-span-5 md:flex md:flex-col md:justify-center min-h-max">
-            <h3 className="text-2xl mb-5">Some Context</h3>
+        <section className="mt-20 grid grid-cols-12 gap-y-20 px-4 pb-20 md:mt-0 lg:px-20">
+          <div className="col-span-full row-start-1 block min-h-max md:col-span-5 md:flex md:flex-col md:justify-center">
+            <h3 className="mb-5 text-2xl">Some Context</h3>
             <p>
               The gameplay and dialogue of Va-11 Hall-a revolve and progress
               through bartending. Creating drinks involves the mixing of
@@ -82,7 +82,7 @@ const SFUEA: React.FC = () => {
             </p>
           </div>
 
-          <div className="row-start-2 col-span-full md:row-start-1 md:col-start-7 md:col-span-6 md:sticky md:top-1/4">
+          <div className="col-span-full row-start-2 md:sticky md:top-1/4 md:col-span-6 md:col-start-7 md:row-start-1">
             {
               <img
                 src={ingameShot}
@@ -95,8 +95,8 @@ const SFUEA: React.FC = () => {
             </p>
           </div>
 
-          <div className="row-start-3 col-span-full md:row-start-2 md:col-span-5">
-            <h3 className="text-2xl mb-5">Project Motivations</h3>
+          <div className="col-span-full row-start-3 md:col-span-5 md:row-start-2">
+            <h3 className="mb-5 text-2xl">Project Motivations</h3>
             <p>
               A problem I saw was that the game’s recipe book doesn’t really
               allow for quick retrieval and comparison of drink recipes. Each
@@ -117,9 +117,9 @@ const SFUEA: React.FC = () => {
           </div>
         </section>
 
-        <section className="px-4 lg:px-20 grid grid-cols-12 pb-20 gap-y-20 md:my-0">
+        <section className="grid grid-cols-12 gap-y-20 px-4 pb-20 md:my-0 lg:px-20">
           <div className="col-span-full row-start-1 md:col-span-5 md:flex md:flex-col md:justify-center">
-            <h3 className="text-2xl mb-5">The Data</h3>
+            <h3 className="mb-5 text-2xl">The Data</h3>
             <p>
               Instead of manually creating the Firebase database content, the
               BeatifulSoup Python library was used to scrape drink information
@@ -138,7 +138,7 @@ const SFUEA: React.FC = () => {
             </p>
           </div>
 
-          <div className="row-start-2 col-span-full md:row-start-1 md:col-start-7 md:col-span-6">
+          <div className="col-span-full row-start-2 md:col-span-6 md:col-start-7 md:row-start-1">
             {
               <img
                 src={firebaseShot}
@@ -150,11 +150,11 @@ const SFUEA: React.FC = () => {
           </div>
         </section>
 
-        <section className="px-4 lg:px-20 grid grid-cols-12 md:mt-5">
-          <h3 className="row-start-1 col-span-full md:col-span-5 text-2xl mb-5">
+        <section className="grid grid-cols-12 px-4 md:mt-5 lg:px-20">
+          <h3 className="col-span-full row-start-1 mb-5 text-2xl md:col-span-5">
             Figma Component Design
           </h3>
-          <div className="mb-20 row-start-2 col-span-12 md:col-span-5">
+          <div className="col-span-12 row-start-2 mb-20 md:col-span-5">
             <p>
               The primary components of this dashboard could be split into
               interactive sort and filter selections, and content units (drink
@@ -163,14 +163,14 @@ const SFUEA: React.FC = () => {
               elements and drink ingredients.
             </p>
           </div>
-          <div className="mt-20 md:mt-0 mb-20 row-start-4 col-span-full md:row-start-2 col-start-1 md:col-start-7 md:col-span-5">
+          <div className="col-span-full col-start-1 row-start-4 mb-20 mt-20 md:col-span-5 md:col-start-7 md:row-start-2 md:mt-0">
             <p>
               To reduce cognitive load and allows users to quickly scan and
               compare recipes, pills were implemented, with specific colors
               symbolizing in-game ingredients and their characteristics.
             </p>
           </div>
-          <div className="row-start-3 col-start-1 col-span-full md:col-span-6">
+          <div className="col-span-full col-start-1 row-start-3 md:col-span-6">
             {
               <img
                 src={figmaShot1}
@@ -179,7 +179,7 @@ const SFUEA: React.FC = () => {
               />
             }
           </div>
-          <div className="row-start-5 col-span-full md:row-start-3 md:col-start-7 md:col-span-6">
+          <div className="col-span-full row-start-5 md:col-span-6 md:col-start-7 md:row-start-3">
             {
               <img
                 src={figmaShot2}
@@ -190,12 +190,12 @@ const SFUEA: React.FC = () => {
           </div>
         </section>
 
-        <section className="px-4 lg:px-20 grid grid-cols-12 md:my-10">
-          <div className="mt-20 col-span-full md:col-span-10 lg:col-span-8">
-            <h3 className="text-2xl mb-5">
+        <section className="grid grid-cols-12 px-4 md:my-10 lg:px-20">
+          <div className="col-span-full mt-20 md:col-span-10 lg:col-span-8">
+            <h3 className="mb-5 text-2xl">
               Implementation: Multi-layered Search and Fitlering of drinks
             </h3>
-            <p className="md:w-3/4 mb-20">
+            <p className="mb-20 md:w-3/4">
               In essence, the React implementation utilizes the Firebase SDK to
               fetch drink data from Firestore, organized in a 'drinks'
               collection. The data is then stored in the component's state with
@@ -215,7 +215,7 @@ const SFUEA: React.FC = () => {
             <video className="mb-2" loop autoPlay muted>
               <source src={searchScreenCast} type="video/mp4" />
             </video>
-            <p className="text-base mb-40">
+            <p className="mb-40 text-base">
               {" "}
               Search bar and Primary Flavour toggle
             </p>
@@ -225,13 +225,13 @@ const SFUEA: React.FC = () => {
             <video className="mb-2" loop autoPlay muted>
               <source src={sortScreenCast} type="video/mp4" />
             </video>
-            <p className="text-base mb-40">Secondary flavor and sorting</p>
+            <p className="mb-40 text-base">Secondary flavor and sorting</p>
           </div>
         </section>
 
         <section className="px-4 lg:px-20 ">
-          <h3 className="text-2xl mb-5">Reflection</h3>
-          <p className="md:w-3/4 lg:w-1/2 mb-20">
+          <h3 className="mb-5 text-2xl">Reflection</h3>
+          <p className="mb-20 md:w-3/4 lg:w-1/2">
             Through this project, I had the opportunity to delve into web
             development technologies and successfully turn a concept into a
             functional design. I recognize that this project leaned more towards

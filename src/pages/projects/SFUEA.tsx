@@ -44,11 +44,11 @@ const SFUEA: React.FC = () => {
   ];
 
   return (
-    <section className="font-space bg-custom-background-gray">
+    <section className="bg-custom-background-gray font-space">
       <ProjectPageHeader project={sfueaProject} />
 
-      <section className="px-4 lg:px-20 grid grid-cols-12">
-        <div className="my-32 md:mt-10 row-start-3 col-span-12 md:col-span-7 xl:col-span-5">
+      <section className="grid grid-cols-12 px-4 lg:px-20">
+        <div className="col-span-12 row-start-3 my-32 md:col-span-7 md:mt-10 xl:col-span-5">
           <p>
             As a club executive of design, I aim to fulfill requests of club
             coordinators and competitive team players to the best of my
@@ -60,18 +60,18 @@ const SFUEA: React.FC = () => {
 
       <section className="b-section bg-custom-background-gray">
         <div className="mt-20 flex items-center overflow-hidden ">
-          <h2 className="text-custom-gray b-section-marquee-text text-4xl md:text-5xl lg:text-8xl font-space">
+          <h2 className="b-section-marquee-text font-space text-4xl text-custom-gray md:text-5xl lg:text-8xl">
             {" "}
             SFU ESPORTS ASSOCIATION // SFU ESPORTS ASSOCIATION //
           </h2>
-          <h2 className="text-custom-gray b-section-marquee-text text-4xl md:text-5xl lg:text-8xl font-space">
+          <h2 className="b-section-marquee-text font-space text-4xl text-custom-gray md:text-5xl lg:text-8xl">
             {" "}
             SFU ESPORTS ASSOCIATION // SFU ESPORTS ASSOCIATION //
           </h2>
         </div>
       </section>
 
-      <div className="px-4 sm:mx-auto my-64 sm:max-w-2xl">
+      <div className="my-64 px-4 sm:mx-auto sm:max-w-2xl">
         <p>
           I’ve created over 40 personalized banners as per the individual
           requests of our competitive and Varsity players, whom I've
@@ -82,7 +82,7 @@ const SFUEA: React.FC = () => {
         </p>
       </div>
 
-      <div className="flex flex-wrap mt-20">
+      <div className="mt-20 flex flex-wrap">
         {imageSources.map((image, index) => (
           <div key={index} className="w-full md:w-1/2">
             <img src={image} alt={`Image ${index + 1}`} className="w-full" />

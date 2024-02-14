@@ -28,12 +28,12 @@ const ROAMFY: React.FC = () => {
 
   return (
     <>
-      <section className="font-space bg-custom-background-gray">
+      <section className="bg-custom-background-gray font-space">
         <ProjectPageHeader project={roamfyProject} />
 
-        <section className="pt-10 px-4 lg:px-20 grid grid-cols-12">
-          <div className="my-10 md:mt-20 row-start-1 col-span-full md:col-span-6">
-            <h3 className="text-2xl mb-5">Overview</h3>
+        <section className="grid grid-cols-12 px-4 pt-10 lg:px-20">
+          <div className="col-span-full row-start-1 my-10 md:col-span-6 md:mt-20">
+            <h3 className="mb-5 text-2xl">Overview</h3>
             <p className="w-full md:w-4/5">
               This project employed the XAMPP Development environment taught in
               IAT 352. PHP served for server-side processing, generating dynamic
@@ -42,8 +42,8 @@ const ROAMFY: React.FC = () => {
               enhanced user interaction, ensuring a responsive interface.
             </p>
           </div>
-          <div className="mt-10 md:mt-20 col-span-full row-start-2 md:row-start-1 col-start-1 md:col-span-6 md:col-start-7">
-            <h3 className="text-2xl mb-5">Project Motivations</h3>
+          <div className="col-span-full col-start-1 row-start-2 mt-10 md:col-span-6 md:col-start-7 md:row-start-1 md:mt-20">
+            <h3 className="mb-5 text-2xl">Project Motivations</h3>
             <p className="w-full md:w-4/5">
               Roamfy is an itinerary sharing platform designed to assist users
               and visitors in planning, tracking, exploring, and sharing trip
@@ -55,14 +55,14 @@ const ROAMFY: React.FC = () => {
           </div>
         </section>
 
-        <section className="px-4 lg:px-20 grid grid-cols-12 mt-20">
-          <h3 className="text-2xl mb-5 col-span-full">The Database</h3>
-          <p className="row-start-2 col-span-full md:col-span-5 col-start-1">
+        <section className="mt-20 grid grid-cols-12 px-4 lg:px-20">
+          <h3 className="col-span-full mb-5 text-2xl">The Database</h3>
+          <p className="col-span-full col-start-1 row-start-2 md:col-span-5">
             To design the SQL database structure, the main components and
             content units were decided. The project focused on two main
             entities: Itineraries and Users.
           </p>
-          <ul className="mt-20 md:mt-0 pl-5 col-span-full md:col-span-5 col-start-1 md:col-start-7 row-start-3 md:row-start-2 list-disc">
+          <ul className="col-span-full col-start-1 row-start-3 mt-20 list-disc pl-5 md:col-span-5 md:col-start-7 md:row-start-2 md:mt-0">
             <li>
               <strong>Members</strong> can create multiple{" "}
               <strong>itineraries.</strong>
@@ -80,7 +80,7 @@ const ROAMFY: React.FC = () => {
               <strong>members</strong>, adding them to their liked collection.
             </li>
           </ul>
-          <div className="mt-20 row-start-4 md:row-start-3 col-start-1 md:col-start-3 col-span-full md:col-span-8">
+          <div className="col-span-full col-start-1 row-start-4 mt-20 md:col-span-8 md:col-start-3 md:row-start-3">
             {
               <img
                 src={erDiagram}
@@ -94,10 +94,10 @@ const ROAMFY: React.FC = () => {
           </div>
         </section>
 
-        <section className="px-4 lg:px-20 grid grid-cols-12 md:my-10">
-          <div className="mt-20 col-span-full col-start-1 md:col-start-2 md:col-span-10 lg:col-start-3  lg:col-span-8">
-            <h3 className="text-2xl mb-5">Implementation</h3>
-            <p className="md:w-3/4 mb-20">
+        <section className="grid grid-cols-12 px-4 md:my-10 lg:px-20">
+          <div className="col-span-full col-start-1 mt-20 md:col-span-10 md:col-start-2 lg:col-span-8  lg:col-start-3">
+            <h3 className="mb-5 text-2xl">Implementation</h3>
+            <p className="mb-20 md:w-3/4">
               The website's implementation ensures a smooth flow of data between
               the frontend and backend, allowing users to seamlessly plan,
               share, and receive feedback on their travel itineraries. The
@@ -107,7 +107,7 @@ const ROAMFY: React.FC = () => {
             <video className="mb-5" loop autoPlay muted>
               <source src={editScreenCast} type="video/mp4" />
             </video>
-            <p className="text-base mb-40">
+            <p className="mb-40 text-base">
               Itinerary filtering and editing page utilizing AJAX for responsive
               and asynchronous results
             </p>
@@ -115,10 +115,10 @@ const ROAMFY: React.FC = () => {
             <video className="mb-5" loop autoPlay muted>
               <source src={commentScreenCast} type="video/mp4" />
             </video>
-            <p className="text-base mb-40">AJAX Comment posting</p>
+            <p className="mb-40 text-base">AJAX Comment posting</p>
           </div>
 
-          <div className="col-span-8 row-start-2 md:col-start-2 md:col-span-6 lg:col-start-3  lg:col-span-5">
+          <div className="col-span-8 row-start-2 md:col-span-6 md:col-start-2 lg:col-span-5  lg:col-start-3">
             <video className="mb-5" loop autoPlay muted>
               <source src={deleteConfirm} type="video/mp4" />
             </video>
@@ -126,7 +126,7 @@ const ROAMFY: React.FC = () => {
               Itinerary deletion confirmation and show password
             </p>
           </div>
-          <div className="col-span-4 row-start-2 md:col-start-9 md:col-span-3 lg:col-start-9 lg:col-span-2">
+          <div className="col-span-4 row-start-2 md:col-span-3 md:col-start-9 lg:col-span-2 lg:col-start-9">
             {
               <img
                 src={passwordChange}
