@@ -44,6 +44,8 @@ const projectsData = [
     technologies: ["MongoDB", "Express", "Node"],
     date: "10.2023",
     apiReferenceLink: "https://github.com/kylezhao101/kylezhao101-api",
+    description:
+      "An API backend service that provides access to my resume and other related information stored in MongoDB, implementing API key middleware to allow only me to perform create, update, and delete operations.",
   },
   {
     title: "SFU Esports Association",

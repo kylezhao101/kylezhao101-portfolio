@@ -12,10 +12,10 @@ import passwordChange from "../../assets/images/roamfy/passwordChange.webp";
 
 const ROAMFY: React.FC = () => {
   // //brings to top of page
-  // const location = useLocation();
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, [location.pathname]);
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   // Find the project with the title 'SFU Esports Association'
   const roamfyProject = projectsData.find(
@@ -156,12 +156,12 @@ const ROAMFY: React.FC = () => {
             Building and designing a content-sharing platform in three weeks was
             both challenging and enlightening. Beyond learning SQL, PHP, and
             dynamic content creation, I faced the significant challenge of
-            implementing many core features beyond what was managed by my
-            teammate. For a detailed view of my involvement, see the{" "}
+            implementing many core features that my teammate was unable to
+            tackle. For a detailed view of my involvement, see the{" "}
             <a
               href="https://github.com/kylezhao101/remote-IAT352/commits/main/Roamfy"
               target="_blank"
-              className="underline"
+              className="underline hover:text-custom-blue"
             >
               commit history
             </a>{" "}
