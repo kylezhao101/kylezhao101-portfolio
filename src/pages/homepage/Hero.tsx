@@ -24,8 +24,8 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section className="min-h-screen bg-custom-background-gray px-4 sm:px-20">
-      <div className="pb-20 pt-32 sm:pb-20 sm:pt-52 2xl:pt-60 ">
+    <section className="flex h-screen flex-col justify-center bg-custom-background-gray px-4 sm:px-20">
+      <div className="pb-20 pt-20 sm:pt-0">
         <p className="font-space">Hello, I'm</p>
         <h1 className="font-neopixel text-8xl md:text-9xl">Kyle Zhao</h1>
       </div>
@@ -53,7 +53,7 @@ const Hero: React.FC = () => {
 
         <div className="col-span-4 col-start-1 pt-40 font-space sm:col-span-8 sm:pl-5 sm:pt-10 md:col-span-8 lg:col-span-5 lg:col-start-7 lg:pt-0 ">
           <div className="swipe">
-            <p className="swipe-text text-2xl leading-snug">
+            <p className="swipe-text text-3xl leading-snug">
               An enthusiast for all things development, graphic design, and
               computer science related.
             </p>
