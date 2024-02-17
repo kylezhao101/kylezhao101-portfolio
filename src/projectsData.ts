@@ -56,6 +56,8 @@ const projectsData = [
     image: crown,
     pageImage: sunsetSeries,
     pageImageCaption: "Sunset Series LAN Tournament Lanyards",
+    scope: "Student Club executive/volunteer",
+    timeSpan: "08.2022 - ongoing",
   },
 ];
 
