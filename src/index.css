@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 
 @font-face {
-    font-family: "Neopixel";
-    src: url("../fonts/NEOPIXEL-Regular.otf");
-  }
+  font-family: "Neopixel";
+  src: url("../fonts/NEOPIXEL-Regular.otf");
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -14,23 +14,23 @@
   width: fit-content;
 
   &::after {
-      display: block;
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 100%;
-      width: 0%;
-      height: 100%;
-      background-color: #1f1f1f;
-      animation: swipe 1s ease-out 0.4s forwards;
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 100%;
+    width: 0%;
+    height: 100%;
+    background-color: #1f1f1f;
+    animation: swipe 1s ease-out 0.4s forwards;
   }
 
   &--delay {
-      &::after {
-          background-color: #FFF;
-          animation-delay: 1s;
-      }
+    &::after {
+      background-color: #fff;
+      animation-delay: 1s;
+    }
   }
 }
 
@@ -41,66 +41,75 @@
 
 @keyframes fade {
   from {
-      opacity: 0;
+    opacity: 0;
   }
 
   to {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
 @keyframes swipe {
   0% {
-      right: 100%;
-      left: 0;
-      width: 0%;
+    right: 100%;
+    left: 0;
+    width: 0%;
   }
 
   50% {
-      right: 0;
-      left: 0;
-      width: 100%;
+    right: 0;
+    left: 0;
+    width: 100%;
   }
 
   100% {
-      right: 0;
-      left: 100%;
-      width: 0%;
+    right: 0;
+    left: 100%;
+    width: 0%;
   }
 }
 
 .rotate-square {
-  transform: rotate(0deg); 
+  transform: rotate(0deg);
   transition: transform 0.3s ease;
 }
 
 .view-more-button:hover .rotate-square,
 .api-reference-button:hover .rotate-square {
-  transform: rotate(45deg); 
+  transform: rotate(45deg);
 }
 
 .a-section-marquee-text {
+  padding-right: 28px;
   white-space: nowrap;
   flex-shrink: 0;
   width: max-content;
   transform: translateX(0);
-  animation: a-text-scroll 45s linear infinite;
+  animation: a-text-scroll 75s linear infinite;
 }
 @keyframes a-text-scroll {
-  0% { transform: translate3d(-100%, 0, 0); }
-  100% { transform: translate3d(0%, 0, 0); }
+  0% {
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0%, 0, 0);
+  }
 }
 
 .b-section-marquee-text {
+  padding-right: 28px;
   white-space: nowrap;
   flex-shrink: 0;
   width: max-content;
   transform: translateX(0);
-  animation: b-text-scroll 45s linear infinite;
+  animation: b-text-scroll 75s linear infinite;
 }
 
 @keyframes b-text-scroll {
-  0% { transform: translate3d(0, 0, 0); }
-  100% { transform: translate3d(-100%, 0, 0); }
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
 }
-
