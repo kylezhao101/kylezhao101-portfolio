@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
 
   return (
     <section className="flex h-screen flex-col justify-center bg-custom-background-gray px-4 sm:px-20">
-      <div className="pb-20 pt-20 sm:pt-0">
+      <div className="pb-20 pt-44 sm:pt-0">
         <p className="font-space">Hello, I'm</p>
         <h1 className="font-neopixel text-8xl md:text-9xl">Kyle Zhao</h1>
       </div>
