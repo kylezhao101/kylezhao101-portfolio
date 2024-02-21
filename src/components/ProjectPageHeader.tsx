@@ -12,6 +12,7 @@ interface ProjectDetails {
   scope?: string;
   timeSpan?: string;
   timeDescription?: string;
+  siteLink?: string;
 }
 interface ProjectDetailProps {
   project: ProjectDetails;
@@ -29,16 +30,28 @@ const ProjectPageHeader: React.FC<ProjectDetailProps> = ({ project }) => {
           </h2>
           <p className="swipe-text text-custom-blue">{project.type}</p>
         </div>
-        {project.repoLink && (
-          <Link
-            to={project.repoLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="swipe flex w-fit items-center transition duration-200 ease-in-out hover:text-custom-blue"
-          >
-            <p className="swipe-text">View Repository</p>
-          </Link>
-        )}
+        <div className="flex gap-5 pt-2">
+          {project.repoLink && (
+            <Link
+              to={project.repoLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="swipe flex w-fit items-center transition duration-200 ease-in-out hover:text-custom-blue"
+            >
+              <p className="swipe-text">View Repository</p>
+            </Link>
+          )}
+          {project.siteLink && (
+            <Link
+              to={project.siteLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="swipe flex w-fit items-center transition duration-200 ease-in-out hover:text-custom-blue"
+            >
+              <p className="swipe-text">View Site</p>
+            </Link>
+          )}
+        </div>
         <div className="col-span-7 col-start-7 row-start-2 mt-20 flex  flex-wrap">
           <div className="w-1/2 pb-5 pr-5">
             <p className="font-bold">Tools</p>
