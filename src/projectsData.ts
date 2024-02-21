@@ -18,7 +18,7 @@ const projectsData = [
     timeSpan: "08.2023 - 09.2023",
     timeDescription: "Roughly spanning 2 months",
     repoLink: "https://github.com/kylezhao101/va11halla-drink-recipes",
-    siteLink:"https://va11halla-drink-recipes.vercel.app",
+    siteLink: "https://va11halla-drink-recipes.vercel.app",
     viewMoreLink: "/VA11HALLA",
     image: va11halla,
     pageImage: va11halla,

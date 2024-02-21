@@ -44,7 +44,6 @@ const Projects: React.FC = () => {
               technologies={project.technologies}
               date={project.date}
               viewMoreLink={project.viewMoreLink}
-              siteLink={project.siteLink}
               apiReferenceLink={project.apiReferenceLink}
               description={project.description}
             />
