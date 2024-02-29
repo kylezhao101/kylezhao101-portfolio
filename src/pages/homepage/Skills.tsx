@@ -44,7 +44,7 @@ const Skills: React.FC = () => {
         <div className="col-span-full row-start-2 flex flex-row flex-wrap font-space leading-normal lg:col-start-7 lg:row-start-1">
           {Object.entries(skills).map(([category, skillsList]) => (
             <ul key={category} className="w-1/2 pb-5">
-              <li className="text-xl text-custom-gray">
+              <li className="text-xl text-custom-blue">
                 {categoryTitles[category as SkillCategory]}
               </li>
               {skillsList.map((skill, index) => (
