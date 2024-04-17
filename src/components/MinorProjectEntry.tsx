@@ -79,7 +79,7 @@ const MinorProjectEntry: React.FC<ProjectEntryProps> = ({
                 <h3
                   className={`pl-5 font-space text-xl text-custom-blue ${isHovered ? "underline" : "no-underline"} duration-300 ease-out`}
                 >
-                  API Reference
+                  Repository
                 </h3>
               </div>
             </Link>
@@ -89,7 +89,7 @@ const MinorProjectEntry: React.FC<ProjectEntryProps> = ({
 
       <div className="">
         {image ? (
-          <img src={image} alt={title} className="w-full" />
+          <img src={image} alt={title} className="w-auto" />
         ) : description ? (
           <p className="font-space text-lg md:w-3/4">{description}</p>
         ) : null}

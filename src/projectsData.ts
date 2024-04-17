@@ -60,6 +60,23 @@ const projectsData = [
     scope: "Student Club executive/volunteer",
     timeSpan: "08.2022 - ongoing",
   },
+  {
+    title: "Histopathological Lung Image Classification & Segmentation (LPAI)",
+    type: "Machine Learning",
+    technologies: ["Pytorch", "MatplotLib", "OpenCV"],
+    apiReferenceLink: "https://github.com/kylezhao101/kylezhao101-api",
+    date: "03.2024 - 04.2024",
+    description: 
+      "LPAI utilizes a PyTorch-based convolutional neural network to automatically classify and quantify lung cancer cells in histopathological images, incorporating preprocessing, model training, performance evaluation, and predictive visualization with cell counts.",
+  },
+  {
+    title: "Fit Foodie",
+    type: "App Development // Fullstack",
+    technologies: ["Android Framework", "Google Maps SDK", "Material 3"],
+    apiReferenceLink: "https://github.com/kylezhao101/fit-foodie-app",
+    date: "02.2024 - 04.2024",
+    image: "https://i.imgur.com/G4VlrWB.png",
+  },
 ];
 
 export default projectsData;

@@ -35,7 +35,7 @@ const Projects: React.FC = () => {
 
         <h2 className="pt-20 font-space text-4xl lg:text-6xl">//Other Work</h2>
         <div className="flex flex-wrap ">
-          {projectsData.slice(2, 4).map((project, index) => (
+          {projectsData.slice(2, 6).map((project, index) => (
             <MinorProjectEntry
               key={index}
               title={project.title}
