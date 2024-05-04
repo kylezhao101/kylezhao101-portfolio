@@ -26,8 +26,8 @@ const projectsData = [
     scope: "Independent & personal project",
   },
   {
-    title: "Roamfy (IAT 352)",
-    type: "Backend // SQL // CRUD // AJAX // Auth",
+    title: "Roamfy",
+    type: "Fullstack // SQL // Schema design",
     technologies: ["PHP", "mySQL", "jQuery", "HTML CSS"],
     date: "12.2023",
     timeSpan: "11.2023 - 12.2023",
