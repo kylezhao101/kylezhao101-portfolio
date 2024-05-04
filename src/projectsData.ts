@@ -64,8 +64,9 @@ const projectsData = [
     title: "Histopathological Lung Image Classification & Segmentation (LPAI)",
     type: "Machine Learning",
     technologies: ["Pytorch", "MatplotLib", "OpenCV"],
-    apiReferenceLink: "https://github.com/kylezhao101/kylezhao101-api",
-    date: "03.2024 - 04.2024",
+    apiReferenceLink: "https://github.com/sfu-cmpt340/2024_1_project_06",
+    date: "04.2024",
+    timeSpan: "03.2024 - 04.2024",
     description: 
       "LPAI utilizes a PyTorch-based convolutional neural network to automatically classify and quantify lung cancer cells in histopathological images, incorporating preprocessing, model training, performance evaluation, and predictive visualization with cell counts.",
   },
@@ -74,7 +75,8 @@ const projectsData = [
     type: "App Development // Fullstack",
     technologies: ["Android Framework", "Google Maps SDK", "Material 3"],
     apiReferenceLink: "https://github.com/kylezhao101/fit-foodie-app",
-    date: "02.2024 - 04.2024",
+    date: "04.2024",
+    timeSpan: "02.2024 - 04.2024",
     image: "https://i.imgur.com/G4VlrWB.png",
   },
 ];
