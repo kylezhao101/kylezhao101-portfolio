@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
         <div className="swipe col-span-4 col-start-1 mr-5 font-space sm:col-span-4 md:col-span-4 md:col-start-5 lg:col-span-3 lg:col-start-4">
           <p className="swipe-text">
             Studying @ Simon Fraser University's School of Interactive Arts and
-            Technology (SIAT)
+            Technology (SIAT). Open for Fall 2024 co-ops.
           </p>
           <br></br>
           <p className="swipe-text text-custom-gray">
