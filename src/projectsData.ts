@@ -40,13 +40,13 @@ const projectsData = [
     scope: "Academic Project. Teammate/contributor: Thomas Li",
   },
   {
-    title: "My Resume REST API",
-    type: "Backend // CRUD // Auth",
-    technologies: ["MongoDB", "Express", "Node"],
-    date: "10.2023",
-    apiReferenceLink: "https://github.com/kylezhao101/kylezhao101-api",
+    title: "My Resume API & Docs Generator",
+    type: "Frontend // Backend // CRUD // Auth",
+    technologies: ["Next.js", "MongoDB", "Express", "Node"],
+    date: "03.2024",
+    viewMoreLink: "https://kylezhao101-api-doc.vercel.app/",
     description:
-      "An API backend service that provides access to my resume and other related information stored in MongoDB, implementing API key middleware to allow only me to perform create, update, and delete operations.",
+      "A documentation generator for my personal API, using MDX to create dynamic navigation functionalities. The API backend service provides access to my resume and other related information stored in MongoDB, implementing API key middleware to allow only me to perform create, update, and delete operations.  ",
   },
   {
     title: "SFU Esports Association",
