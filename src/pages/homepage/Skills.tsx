@@ -1,6 +1,6 @@
 const Skills: React.FC = () => {
   const skills = {
-    frontEnd: ["HTML CSS JavaScript", "TailWindCSS", "SCSS", "jQuery", "React"],
+    frontEnd: ["HTML CSS JavaScript", "Next.js", "TailWindCSS", "SCSS", "jQuery", "React"],
     backEnd: ["Node", "Express", "PHP", "Flask"],
     dataBases: ["MySQL", "MongoDB", "Firebase"],
     designTools: ["Figma", "Adobe Photoshop"],
