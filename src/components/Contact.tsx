@@ -29,11 +29,7 @@ const Contact: React.FC = () => {
       className="bg-custom-background-gray px-4 pb-20 pt-60 sm:px-20"
     >
       <div className="grid grid-cols-4 gap-0 sm:grid-cols-8 lg:grid-cols-12">
-        <div className="col-span-8 col-start-1 lg:col-start-2">
-          <h2 className="mb-20 font-neopixel text-5xl sm:text-7xl md:mb-10">
-            Get in touch
-          </h2>
-        </div>
+
 
         <div className="col-span-4 row-start-3 font-space sm:col-span-4 sm:col-start-1 md:row-start-2 lg:col-start-2">
           <div className="mb-5 w-min">
@@ -76,9 +72,7 @@ const Contact: React.FC = () => {
           >
             kzz@sfu.ca
           </a>
-          <p className="mt-5">(Open for Fall 2024)</p>
-          <p className="mt-5">Vancouver, Canada</p>
-          <p>{formatTimeInTimeZone(currentTime, "America/Vancouver")} (PST)</p>
+          <p className="mt-5">Vancouver, Canada. Open for Fall 2024 positions. {formatTimeInTimeZone(currentTime, "America/Vancouver")} (PST)</p>
         </div>
       </div>
     </section>

@@ -2,6 +2,8 @@ import crown from "./assets/images/sfuea/ottoisgun.webp";
 import sunsetSeries from "./assets/images/sfuea/sunset-series.webp";
 import roamfy from "./assets/images/roamfy/Roamfy-mockup.webp";
 import va11halla from "./assets/images/va11halla/va11halla-mockup.webp";
+import docgen from "./assets/images/docgen.png";
+import cell from "./assets/images/cellcontour.png"
 
 const projectsData = [
   {
@@ -45,6 +47,7 @@ const projectsData = [
     technologies: ["Next.js", "MongoDB", "Express", "Node"],
     date: "03.2024",
     viewMoreLink: "https://kylezhao101-api-doc.vercel.app/",
+    image: docgen,
     description:
       "A documentation generator for my personal API, using MDX to create dynamic navigation functionalities. The API backend service provides access to my resume and other related information stored in MongoDB, implementing API key middleware to allow only me to perform create, update, and delete operations.  ",
   },
@@ -57,16 +60,17 @@ const projectsData = [
     image: crown,
     pageImage: sunsetSeries,
     pageImageCaption: "Sunset Series LAN Tournament Lanyards",
-    scope: "Student Club executive/volunteer",
+    scope: "Student Club executive",
     timeSpan: "08.2022 - ongoing",
   },
   {
-    title: "Histopathological Lung Image Classification & Segmentation (LPAI)",
+    title: "Histopathological Lung Image Classification & Segmentation",
     type: "Machine Learning",
     technologies: ["Pytorch", "MatplotLib", "OpenCV"],
     apiReferenceLink: "https://github.com/sfu-cmpt340/2024_1_project_06",
     date: "04.2024",
     timeSpan: "03.2024 - 04.2024",
+    image:cell,
     description: 
       "LPAI utilizes a PyTorch-based convolutional neural network to automatically classify and quantify lung cancer cells in histopathological images, incorporating preprocessing, model training, performance evaluation, and predictive visualization with cell counts.",
   },

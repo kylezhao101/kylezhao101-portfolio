@@ -56,7 +56,7 @@ const NavBar: React.FC = () => {
                   transition: "opacity 0.3s ease-in-out",
                 }}
               >
-                / 0{index + 1}{" "}
+                /  0{index + 1}{" "}
                 {target.charAt(0).toUpperCase() + target.slice(1)}
               </ScrollLink>
             );
@@ -74,7 +74,7 @@ const NavBar: React.FC = () => {
                   transition: "opacity 0.3s ease-in-out",
                 }}
               >
-                / 0{index + 1}{" "}
+                /  0{index + 1}{" "}
                 {target.charAt(0).toUpperCase() + target.slice(1)}
               </RouterLink>
             );

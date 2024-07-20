@@ -33,8 +33,8 @@ const Projects: React.FC = () => {
           />
         ))}
 
-        <h2 className="pt-20 font-space text-4xl lg:text-6xl">//Other Work</h2>
-        <div className="flex flex-wrap ">
+        <h2 className="pt-20 font-space xt-4xl lg:text-6xl">//Other Work</h2>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-5">
           {projectsData.slice(2, 6).map((project, index) => (
             <MinorProjectEntry
               key={index}

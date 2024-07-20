@@ -27,9 +27,9 @@ const MinorProjectEntry: React.FC<ProjectEntryProps> = ({
   const [isHovered, setHovered] = useState(false);
 
   return (
-    <section className="flex flex-col justify-between gap-8 border-b border-custom-gray pb-10 pt-20 lg:w-1/2">
+    <section className="flex flex-col justify-between gap-8 border-b border-custom-gray pb-10 pt-20">
       <div className="">
-        <h2 className={`mb-5 pt-5 font-space text-3xl lg:pt-0`}>{title}</h2>
+        <h2 className={`mb-2 pt-5 font-space text-3xl lg:pt-0 pr-12`}>{title}</h2>
         <p className="col-span-4 mb-5 font-space lg:col-span-3 lg:col-start-1 lg:row-start-1">
           {type}
         </p>
@@ -87,9 +87,9 @@ const MinorProjectEntry: React.FC<ProjectEntryProps> = ({
         </div>
       </div>
 
-      <div className="">
+      <div className="flex justify-center">
         {image ? (
-          <img src={image} alt={title} className="w-auto" />
+          <img src={image} alt={title} className="" />
         ) : description ? (
           <p className="font-space text-lg md:w-3/4">{description}</p>
         ) : null}

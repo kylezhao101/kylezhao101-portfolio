@@ -43,7 +43,7 @@ const ProjectEntry: React.FC<ProjectEntryProps> = ({
         <h3 className="font-neopixel text-xl text-custom-blue">
           <div className="flex ">
             <div className={`mr-3 mt-2 h-2 w-2 bg-custom-blue`}></div>
-            <h3 className="font-space text-base text-custom-blue">{title}</h3>
+            <h3 className="font-space text-base text-custom-blue">/ {title}</h3>
           </div>
         </h3>
       </div>
@@ -56,7 +56,7 @@ const ProjectEntry: React.FC<ProjectEntryProps> = ({
         onMouseLeave={() => setProjectHovered(false)}
       >
         <div className="col-span-4 row-start-2 flex flex-col justify-center sm:col-span-full lg:col-span-6 lg:row-start-1">
-          <h2 className={`mb-5 pt-5 font-space text-4xl lg:pt-0 xl:text-6xl`}>
+          <h2 className={`mb-2 pt-5 font-space text-4xl lg:pt-0 xl:text-6xl`}>
             {title}
           </h2>
           <p className="col-span-4 mb-10 font-space lg:col-span-3 lg:col-start-1 lg:row-start-1">
