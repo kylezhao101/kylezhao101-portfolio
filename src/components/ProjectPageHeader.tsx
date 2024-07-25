@@ -25,12 +25,12 @@ const ProjectPageHeader: React.FC<ProjectDetailProps> = ({ project }) => {
     <section className="grid grid-cols-12 px-4 pt-20 lg:px-20">
       <div className="col-span-full row-start-1 md:col-span-5 md:flex md:flex-col md:justify-end">
         <div className="swipe">
-          <h2 className="swipe-text mb-5 pt-5 text-4xl lg:pt-0 xl:text-6xl">
+          <h2 className="swipe-text pt-5 text-4xl lg:pt-0 xl:text-6xl">
             {project.title}
           </h2>
           <p className="swipe-text text-custom-blue">{project.type}</p>
         </div>
-        <div className="flex gap-5 pt-2">
+        <div className="flex gap-5">
           {project.repoLink && (
             <Link
               to={project.repoLink}

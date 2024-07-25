@@ -72,7 +72,7 @@ const Contact: React.FC = () => {
           >
             kzz@sfu.ca
           </a>
-          <p className="mt-5">Vancouver, Canada. Open for Fall 2024 positions. {formatTimeInTimeZone(currentTime, "America/Vancouver")} (PST)</p>
+          <p className="mt-5">Vancouver, Canada. Open for Fall 2024 positions. <br></br>{formatTimeInTimeZone(currentTime, "America/Vancouver")} (PST)</p>
         </div>
       </div>
     </section>

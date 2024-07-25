@@ -15,6 +15,9 @@ import colingogo from "../../assets/images/sfuea/colingogo.webp";
 import mai from "../../assets/images/sfuea/mai.webp";
 import angelspell from "../../assets/images/sfuea/angelspell.webp";
 
+import { VelocityScroll } from "../../components/magicui/scroll-based-velocity";
+import NumberTicker from "../../components/magicui/number-ticker";
+
 const SFUEA: React.FC = () => {
   //brings to top of page
   const location = useLocation();
@@ -57,24 +60,18 @@ const SFUEA: React.FC = () => {
           </p>
         </div>
       </section>
-
       <section className="b-section bg-custom-background-gray">
-        <div className="mt-20 flex items-center overflow-hidden ">
-          <h2 className="b-section-marquee-text font-space text-4xl text-custom-gray md:text-5xl lg:text-8xl">
-            {" "}
-            SFU ESPORTS ASSOCIATION // SFU ESPORTS ASSOCIATION //
-          </h2>
-          <h2 className="b-section-marquee-text font-space text-4xl text-custom-gray md:text-5xl lg:text-8xl">
-            {" "}
-            SFU ESPORTS ASSOCIATION // SFU ESPORTS ASSOCIATION //
-          </h2>
-        </div>
+        <VelocityScroll
+          text="SFU ESPORTS ASSOCIATION //"
+          default_velocity={1}
+          className="font-space text-4xl md:text-5xl lg:text-8xl tracking-[-0.02em] text-rose-500 drop-shadow-sm pt-20 dark:text-white md:leading-[5rem]"
+        />
       </section>
 
       <div className="my-64 px-4 sm:mx-auto sm:max-w-2xl">
         <p>
-          I’ve created over 40 personalized banners as per the individual
-          requests of our competitive and Varsity players, whom I've
+          I’ve created over <NumberTicker value={40} /> personalized banners as per the individual
+          requests of our competitive and Varsity players, with whom I've
           communicated with throughout the process.
           <br />
           <br />

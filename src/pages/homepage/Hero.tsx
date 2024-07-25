@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-
+import DotPattern from "../../components/magicui/dot-pattern";
+import { cn } from "../../utils";
 const Hero: React.FC = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
 
@@ -60,6 +61,13 @@ const Hero: React.FC = () => {
           </div>
         </div>
       </div>
+      <DotPattern
+        className={cn(
+          "[mask-image:linear-gradient(to_bottom,white,transparent)] opacity-60 z-10",
+        )}
+        width={20}
+        height={20}
+      />
     </section>
   );
 };
