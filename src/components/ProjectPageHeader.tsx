@@ -28,9 +28,9 @@ const ProjectPageHeader: React.FC<ProjectDetailProps> = ({ project }) => {
           <h2 className="swipe-text pt-5 text-4xl lg:pt-0 xl:text-6xl">
             {project.title}
           </h2>
-          <p className="swipe-text text-custom-blue">{project.type}</p>
+          <p className="swipe-text text-custom-blue mt-2">{project.type}</p>
         </div>
-        <div className="flex gap-5">
+        <div className="flex gap-5 mt-1">
           {project.repoLink && (
             <Link
               to={project.repoLink}
