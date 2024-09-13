@@ -82,7 +82,7 @@ const NavBar: React.FC = () => {
         })}
       </div>
       <a
-        href="/Kyle-Zhao-Resume.pdf"
+        href="https://drive.google.com/file/d/1chSWVhGRFxW5OxFAt29KV7P0EJ68gyOs/view?usp=sharing"
         target="_blank"
         rel="noopener noreferrer"
         className="rounded-full bg-black px-5 py-1 font-space text-sm text-custom-background-gray duration-300  ease-in-out hover:cursor-pointer hover:bg-custom-blue"
