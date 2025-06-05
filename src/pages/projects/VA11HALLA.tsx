@@ -12,7 +12,7 @@ import firebaseShot from "../../assets/images/va11halla/firebase-screenshot.webp
 import searchScreenCast from "../../assets/videos/va11halla/main-search.mp4";
 import sortScreenCast from "../../assets/videos/va11halla/secondary-and-sort.mp4";
 
-const SFUEA: React.FC = () => {
+const VA11HALLA: React.FC = () => {
   // //brings to top of page
   const location = useLocation();
   useEffect(() => {
@@ -249,4 +249,4 @@ const SFUEA: React.FC = () => {
   );
 };
 
-export default SFUEA;
+export default VA11HALLA;
