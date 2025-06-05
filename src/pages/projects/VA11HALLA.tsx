@@ -122,7 +122,7 @@ const SFUEA: React.FC = () => {
             <h3 className="mb-5 text-2xl">The Data</h3>
             <p>
               Instead of manually creating the Firebase database content, the
-              BeatifulSoup Python library was used to scrape drink information
+              BeautifulSoup Python library was used to scrape drink information
               from the{" "}
               <a
                 className="underline hover:text-custom-blue"
