@@ -17,13 +17,13 @@ const ROAMFY: React.FC = () => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
-  // Find the project with the title 'SFU Esports Association'
+  // Find the project with the title 'Roamfy'
   const roamfyProject = projectsData.find(
     (project) => project.title === "Roamfy",
   );
 
   if (!roamfyProject) {
-    return <div>Roamfy (IAT 352) project found</div>;
+    return <div>No Roamfy (IAT{"\u202F"}352) project found.</div>;
   }
 
   return (
