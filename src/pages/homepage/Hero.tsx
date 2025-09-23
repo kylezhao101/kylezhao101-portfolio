@@ -1,28 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import DotPattern from "../../components/magicui/dot-pattern";
 import { cn } from "../../utils";
 const Hero: React.FC = () => {
-  const [currentTime, setCurrentTime] = useState(new Date());
-
-  useEffect(() => {
-    // Update the current time every second
-    const intervalId = setInterval(() => {
-      setCurrentTime(new Date());
-    }, 1000);
-
-    // Clear the interval on component unmount
-    return () => clearInterval(intervalId);
-  }, []);
-
-  // Function to format time in a specific time zone
-  const formatTimeInTimeZone = (date: Date, timeZone: string) => {
-    return new Intl.DateTimeFormat("en-US", {
-      timeZone: timeZone,
-      hour: "numeric",
-      minute: "numeric",
-      second: "numeric",
-    }).format(date);
-  };
 
   return (
     <section className="flex min-h-screen flex-col justify-center bg-custom-background-gray px-4 sm:px-20">
