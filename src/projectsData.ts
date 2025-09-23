@@ -4,8 +4,25 @@ import roamfy from "./assets/images/roamfy/Roamfy-mockup.webp";
 import va11halla from "./assets/images/va11halla/va11halla-mockup.webp";
 import docgen from "./assets/images/docgen.png";
 import cell from "./assets/images/cellcontour.png"
+import moment from "./assets/images/moment/Moment-Energy.png";
 
 const projectsData = [
+  {
+    title: "Moment Energy",
+    type: "Fullstack Software Engineer Co-op",
+    technologies: [
+      "React",
+      "NestJS",
+      "AWS",
+    ],
+    date: "01.2025 - 08.2025",
+    timeSpan: "01.2025 - 08.2025",
+    timeDescription: "8 month co-op",
+    viewMoreLink: "/moment-energy",
+    image: moment,
+    pageImage: moment,
+    scope: "Co-op position",
+  },
   {
     title: "VA11-Hall-A Drinktionary Fansite",
     type: "Web Development // UI Design",
@@ -43,7 +60,7 @@ const projectsData = [
   },
   {
     title: "My Resume API & Docs Generator",
-    type: "Frontend // Backend // CRUD // Auth",
+    type: "Frontend // Backend",
     technologies: ["Next.js", "MongoDB", "Express", "Node"],
     date: "03.2024",
     viewMoreLink: "https://kylezhao101-api-doc.vercel.app/",
@@ -53,15 +70,15 @@ const projectsData = [
   },
   {
     title: "SFU Esports Association",
-    type: "Design Executive // Graphic Design & player branding",
+    type: "Graphic Design & player branding",
     technologies: ["Photoshop", "Figma"],
-    date: "08.2022 - ongoing",
+    date: "08.2022 - 08.2025",
     viewMoreLink: "/SFUEA",
     image: crown,
     pageImage: sunsetSeries,
     pageImageCaption: "Sunset Series LAN Tournament Lanyards",
     scope: "Student Club executive",
-    timeSpan: "08.2022 - ongoing",
+    timeSpan: "08.2022 - 08.2025",
   },
   {
     title: "Histopathological Lung Image Classification & Segmentation",
@@ -76,7 +93,7 @@ const projectsData = [
   },
   {
     title: "Fit Foodie",
-    type: "App Development // Fullstack",
+    type: "App Development",
     technologies: ["Android Framework", "Google Maps SDK", "Material 3"],
     apiReferenceLink: "https://github.com/kylezhao101/fit-foodie-app",
     date: "04.2024",

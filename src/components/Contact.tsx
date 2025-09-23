@@ -35,7 +35,7 @@ const Contact: React.FC = () => {
           <div className="mb-5 w-min">
             <a
               className="hover:text-custom-blue"
-              href="/Kyle-Zhao-Resume.pdf"
+              href="https://drive.google.com/file/d/1chSWVhGRFxW5OxFAt29KV7P0EJ68gyOs/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >

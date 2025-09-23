@@ -8,7 +8,7 @@ const Projects: React.FC = () => {
     <>
       <section className="a-section bg-custom-background-gray pt-40">
         <VelocityScroll
-          text="FEATURED PROJECTS ²//"
+          text="FEATURED ²//"
           default_velocity={1}
           className="font-space text-4xl md:text-5xl lg:text-8xl tracking-[-0.02em] text-black drop-shadow-sm dark:text-white md:leading-[5rem]"
         />
@@ -29,12 +29,12 @@ const Projects: React.FC = () => {
           />
         ))}
         <VelocityScroll
-          text="OTHER WORK ⁴//"
+          text="OTHER STUFF ⁴//"
           default_velocity={1}
           className="font-space text-4xl md:text-5xl lg:text-8xl tracking-[-0.02em] text-gray-400 drop-shadow-sm pt-20 dark:text-white md:leading-[5rem]"
         />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-5">
-          {projectsData.slice(2, 6).map((project, index) => (
+          {projectsData.slice(2, 7).map((project, index) => (
             <MinorProjectEntry
               key={index}
               title={project.title}

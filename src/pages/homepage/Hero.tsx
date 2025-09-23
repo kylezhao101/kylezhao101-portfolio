@@ -34,22 +34,21 @@ const Hero: React.FC = () => {
       <div className="grid grid-cols-4 gap-5 sm:grid-cols-8 sm:gap-0 md:grid-cols-8 lg:grid-cols-12">
         <div className="col-span-4 flex items-start sm:col-span-3">
           <div className="mr-3 mt-2 h-3 w-3 bg-custom-blue"></div>
-          <div className="swipe">
-            <h3 className="swipe-text mr-5 font-space text-xl">
-              Designer + Developer
-            </h3>
-          </div>
+          <h3 className="swipe-text mr-5 font-space text-xl">
+            Designer + Developer
+          </h3>
         </div>
 
         <div className="swipe col-span-4 col-start-1 mr-5 font-space sm:col-span-4 md:col-span-4 md:col-start-5 lg:col-span-3 lg:col-start-4">
           <p className="swipe-text">
             Studying @ Simon Fraser University's School of Interactive Arts and
-            Technology (SIAT). Open for Fall 2024 co-ops.
+            Technology (SIAT). Osu! World Cup Design Team Illustrator.
+            <br></br>    <br></br>Open for 2026 Co-op and full-time positions.
           </p>
           <br></br>
-          <p className="swipe-text text-custom-gray">
+          {/* <p className="swipe-text text-custom-gray">
             {formatTimeInTimeZone(currentTime, "America/Vancouver")} (pst)
-          </p>
+          </p> */}
         </div>
 
         <div className="col-span-4 col-start-1 pt-40 font-space sm:col-span-8 sm:pl-5 sm:pt-10 md:col-span-8 lg:col-span-5 lg:col-start-7 lg:pt-0 ">

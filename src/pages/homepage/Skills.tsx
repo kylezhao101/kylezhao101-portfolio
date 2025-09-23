@@ -1,11 +1,11 @@
 const Skills: React.FC = () => {
   const skills = {
-    frontEnd: ["HTML CSS JavaScript", "Next.js", "TailWindCSS", "SCSS", "jQuery", "React"],
-    backEnd: ["Node", "Express", "PHP", "Flask"],
-    dataBases: ["MySQL", "MongoDB", "Firebase", "Supabase/PostgreSQL"],
+    frontEnd: ["Next.js", "TailWindCSS", "React"],
+    backEnd: ["Node", "Express", "PHP", "Flask", "NestJS"],
+    dataBases: ["MySQL", "MongoDB", "Firebase", "SupaBase", "PostgreSQL", "Azure CosmosDB"],
     designTools: ["Figma", "Adobe Photoshop"],
     otherLanguages: ["Python", "Java", "C / C++"],
-    otherTools: ["Native Android", "PyTorch", "Cypress"]
+    otherTools: ["Native Android", "PyTorch", "Cypress", "AWS"]
   };
 
   type SkillCategory = keyof typeof skills;

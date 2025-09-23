@@ -74,7 +74,7 @@ const VA11HALLA: React.FC = () => {
               The gameplay and dialogue of Va-11 Hall-a revolve and progress
               through bartending. Creating drinks involves the mixing of
               components and following preparation steps, which can result in
-              flavors that match customer’s requests.
+              flavors that match customer's requests.
               <br></br>
               <br></br>
               The choices of drinks and their proportions can influence the
@@ -98,7 +98,7 @@ const VA11HALLA: React.FC = () => {
           <div className="col-span-full row-start-3 md:col-span-5 md:row-start-2">
             <h3 className="mb-5 text-2xl">Project Motivations</h3>
             <p>
-              A problem I saw was that the game’s recipe book doesn’t really
+              A problem I saw was that the game's recipe book doesn't really
               allow for quick retrieval and comparison of drink recipes. Each
               recipe is restricted to its unique page, and players can only
               browse through name, flavor, and type individually.

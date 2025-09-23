@@ -6,6 +6,7 @@ import Home from "./pages/homepage/Home";
 import SFUEA from "./pages/projects/SFUEA";
 import ROAMFY from "./pages/projects/ROAMFY";
 import VA11HALLA from "./pages/projects/VA11HALLA";
+import MOMENT from "./pages/projects/MOMENT";
 import Contact from "./components/Contact";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/VA11HALLA" element={<VA11HALLA />} />
           <Route path="/ROAMFY" element={<ROAMFY />} />
           <Route path="/SFUEA" element={<SFUEA />} />
+          <Route path="/moment-energy" element={<MOMENT />} />
         </Routes>
         <Contact />
       </Router>

@@ -6,7 +6,7 @@ const NavBar: React.FC = () => {
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
   const location = useLocation();
 
-  const links = ["abt-me", "expertise", "works", "contact"];
+  const links = ["abt-me", "expertise", "work", "contact"];
 
   const scrollToTop = () => {
     window.scrollTo({
